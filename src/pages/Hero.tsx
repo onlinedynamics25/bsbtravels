@@ -22,7 +22,9 @@ const Hero = () => {
           </p>
 
           {/* CTA Button */}
-          <button className="mt-[86px] px-[12px] py-[20px] bg-[#061517] text-[#F7EBD5] text-[20px]/[28px] tracking-[0.2%] hover:bg-[#F7EBD5] hover:text-[#061517] transition "></button>
+          <button className="mt-[86px] px-[12px] py-[20px] bg-[#061517] text-[#F7EBD5] text-[20px]/[28px] tracking-[0.2%] hover:bg-[#F7EBD5] hover:text-[#061517] transition ">
+            Register For An Event Now
+          </button>
         </div>
       </section>
     </main>
