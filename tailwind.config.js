@@ -6,7 +6,13 @@ module.exports = {
     "./src/styles/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        playfair: ["var(--font-playfair)", "serif"],
+        baskervville: ["var(--font-baskervville)", "serif"],
+        baskervvilleSC: ["var(--font-baskervvilleSC)", "serif"],
+      },
+    },
   },
   plugins: [],
 };
