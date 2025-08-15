@@ -8,9 +8,9 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        playfair: ["var(--font-playfair)", "serif"],
-        baskervville: ["var(--font-baskervville)", "serif"],
-        baskervvilleSC: ["var(--font-baskervvilleSC)", "serif"],
+        baskervvilleSC: ["'Baskervville SC'", "serif"],
+        baskervville: ["Baskervville", "serif"],
+        playfair: ["'Playfair Display'", "serif"],
       },
     },
   },
