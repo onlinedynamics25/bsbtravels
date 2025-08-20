@@ -1,37 +1,5 @@
 @import "tailwindcss";
 
-@font-face {
-  font-family: Playfair Display;
-  src: url("/fonts/PlayfairDisplay-VariableFont_wght.ttf")
-    format("ttf-variations");
-  font-weight: 400 900;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: Baskervville SC;
-  src: url("/fonts/BaskervvilleSC-VariableFont_wght.ttf")
-    format("ttf-variations");
-  font-weight: 400 900;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: Baskervville;
-  src: url("/fonts/Baskervville-VariableFont_wght.ttf") format("ttf-variations");
-  font-weight: 400 900;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: Baskervville;
-  src: url("/fonts/Baskervville-Italic-VariableFont_wght.ttf")
-    format("ttf-variations");
-  font-weight: 400 900;
-  font-style: italic;
-}
-
 body {
-  padding: 0;
-  margin: 0;
+  font-family: var(--font-baskervville);
 }

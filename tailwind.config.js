@@ -3,14 +3,14 @@ module.exports = {
   content: [
     "./src/app/**/*.{js,ts,jsx,tsx}",
     "./src/pages/**/*.{js,ts,jsx,tsx}",
-    "./src/styles/**/*.{js,ts,jsx,tsx}",
+    "./src/components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
       fontFamily: {
-        baskervvilleSC: ["'Baskervville SC'", "serif"],
-        baskervville: ["Baskervville", "serif"],
-        playfair: ["'Playfair Display'", "serif"],
+        playfair: "var(--font-playfair)",
+        baskervvilleSC: "var(--font-baskervvilleSC)",
+        baskervville: "var(--font-baskervville)",
       },
     },
   },

@@ -2,14 +2,14 @@ import React from "react";
 
 const Hero = () => {
   return (
-    <main>
-      <nav></nav>
-      <section
-        className="min-h-screen bg-cover bg-center flex items-center justify-center text-[#061517] pt-[128px]"
-        style={{ backgroundImage: "url('/bg2.png')" }}
-      >
+    <main id="hero" className="h-screen">
+      <section className="min-h-screen flex items-center justify-center text-[#061517] pt-[128px]">
         {/* Overlay */}
-        <div className="absolute inset-0 bg-[#E6BC72] opacity-75"></div>
+        <div
+          className=" absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: "url('/background-images/bg2.png')" }}
+        ></div>
+        <div className="absolute h-screen inset-0 bg-[#E6BC72] opacity-75"></div>
 
         {/* Content */}
         <div className="relative z-10 text-center px-4">
