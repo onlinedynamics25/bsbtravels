@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
-body {
-  font-family: var(--font-baskervville);
+@theme inline {
+  --font-playfair: var(--font-playfair);
+  --font-baskervville: var(--font-baskervville);
+  --font-baskervvilleSC: var(--font-baskervvilleSC);
 }

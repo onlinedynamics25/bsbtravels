@@ -39,7 +39,7 @@ const NavBar = () => {
 
           {/* CTA (Desktop Only) */}
           <div className="hidden md:block">
-            <button className="md:px-3 md:py-5 bg-[#F7EBD5] text-[#061517] font-baskervville font-normal text-xl leading-7 tracking-[0.2%]">
+            <button className="md:px-5 md:py-3 bg-[#F7EBD5] text-[#061517] font-baskervville font-normal text-xl leading-7 tracking-[0.2%]">
               Discover Events
             </button>
           </div>

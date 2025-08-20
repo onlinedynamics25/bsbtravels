@@ -61,7 +61,7 @@ export default function RootLayout({
       lang="en"
       className={`${playfair.variable} ${baskervvilleSC.variable} ${baskervvile.variable}`}
     >
-      <body className="antialiased">{children}</body>
+      <body className="font-baskervville">{children}</body>
     </html>
   );
 }
