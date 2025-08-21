@@ -2,11 +2,8 @@ import React from "react";
 
 const Hero = () => {
   return (
-    <main>
-      <section
-        id="hero"
-        className=" relative h-[80vh] flex items-center justify-center text-[#061517] font-baskervville pt-[128px]"
-      >
+    <main id="hero" className="h-[80vh]">
+      <section className=" relative flex items-center justify-center text-[#061517] font-baskervville pt-[128px]">
         {/* Overlay */}
         <div
           className=" absolute inset-0 bg-cover bg-center"
