@@ -2,8 +2,8 @@ import React from "react";
 
 const Hero = () => {
   return (
-    <main id="hero">
-      <section className="flex items-center justify-center text-[#061517] font-baskervville pt-[128px]">
+    <main id="hero" className="h-screen">
+      <section className="min-h-screen flex items-center justify-center text-[#061517] font-baskervville pt-[128px]">
         {/* Overlay */}
         <div
           className=" absolute inset-0 bg-cover bg-center"
