@@ -2,7 +2,7 @@ import React from "react";
 
 const Hero = () => {
   return (
-    <main id="hero" className="h-[80vh]">
+    <main id="hero">
       <section className="flex items-center justify-center text-[#061517] font-baskervville pt-[128px]">
         {/* Overlay */}
         <div
