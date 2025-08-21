@@ -2,7 +2,7 @@ import React from "react";
 
 const Hero = () => {
   return (
-    <div
+    <section
       id="hero"
       className=" relative h-[80vh] flex items-center justify-center text-[#061517] font-baskervville pt-[128px]"
     >
@@ -27,7 +27,7 @@ const Hero = () => {
           Register For An Event Now
         </button>
       </div>
-    </div>
+    </section>
   );
 };
 
