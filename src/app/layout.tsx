@@ -64,7 +64,7 @@ export default function RootLayout({
       className={`${playfair.variable} ${baskervvilleSC.variable} ${baskervvile.variable}`}
     >
       <body className="font-baskervville">
-        <NavBar /> {children} <Footer />
+        <NavBar /> {children}
       </body>
     </html>
   );
