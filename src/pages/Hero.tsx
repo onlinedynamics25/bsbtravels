@@ -6,7 +6,7 @@ const Hero = () => {
       <section className="min-h-screen flex items-center justify-center text-[#061517] font-baskervville pt-[128px]">
         {/* Overlay */}
         <div
-          className=" absolute inset-0 bg-cover bg-center"
+          className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: "url('/background-images/bg2.png')" }}
         ></div>
         <div className="absolute h-screen inset-0 bg-[#E6BC72] opacity-60"></div>
