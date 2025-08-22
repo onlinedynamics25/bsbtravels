@@ -6,7 +6,7 @@ const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="w-full min-h-20 fixed top-0 left-0 z-50 bg-[#0F363B] backdrop-blur-md text-[#F7EBD5] shadow-md">
+    <nav className="absolute w-full min-h-20 top-0 left-0 z-50 bg-[#0F363B] backdrop-blur-md text-[#F7EBD5] shadow-md">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 lg:mx-20 lg:my-3">
         <div className="flex justify-between items-center h-20">
           {/* Brand */}

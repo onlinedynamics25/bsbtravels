@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "../styles/globals.css";
+import NavBar from "@/components/Navbar";
+import Footer from "@/pages/Footer";
 
 //Playfair Display
 const playfair = localFont({
@@ -61,7 +63,9 @@ export default function RootLayout({
       lang="en"
       className={`${playfair.variable} ${baskervvilleSC.variable} ${baskervvile.variable}`}
     >
-      <body className="font-baskervville">{children}</body>
+      <body className="font-baskervville">
+        <NavBar /> {children} <Footer />
+      </body>
     </html>
   );
 }
