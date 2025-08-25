@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const events = [
@@ -48,6 +48,16 @@ const Events = () => {
       setCurrentEvent((prev) => prev - 1);
     }
   };
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentFlyer((prev) =>
+        prev < events[currentEvent].flyers.length - 1 ? prev + 1 : 0
+      );
+    }, 4000);
+
+    return () => clearInterval(timer);
+  }, [currentEvent]);
 
   return (
     <section
@@ -131,6 +141,24 @@ const Events = () => {
                 transition={{ duration: 0.5 }}
               />
             </AnimatePresence>
+
+            {/* Flyer navigation arrows */}
+            {currentFlyer > 0 && (
+              <button
+                onClick={prevFlyer}
+                className="absolute left-2 top-1/2 -translate-y-1/2 w-10 h-10 flex items-center justify-center"
+              >
+                prev
+              </button>
+            )}
+            {currentFlyer < event.flyers.length - 1 && (
+              <button
+                onClick={prevFlyer}
+                className="absolute left-2 top-1/2 -translate-y-1/2 w-10 h-10 flex items-center justify-center"
+              >
+                next
+              </button>
+            )}
           </div>
         </div>
       </div>
