@@ -3,6 +3,7 @@ import React from "react";
 const Hero = () => {
   return (
     <section
+      id="hero"
       className="relative bg-cover bg-center flex items-center justify-center text-[#061517] pt-32 pb-28"
       style={{ backgroundImage: "url('/background-images/hero.png')" }}
     >

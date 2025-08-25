@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { Menu, X } from "lucide-react";
+import Link from "next/link";
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,21 +21,21 @@ const NavBar = () => {
 
           {/* Desktop Nav Links */}
           <div className=" hidden md:flex space-x-0 font-baskervvilleSC text-[#F7EBD5] text-xl leading-7 tracking-[0.2%]">
-            <a href="#hero" className="md:p-2">
+            <Link href="#hero" className="md:p-2">
               Home
-            </a>
-            <a href="#events" className="md:p-2">
+            </Link>
+            <Link href="#events" className="md:p-2">
               Events
-            </a>
-            <a href="#gallery" className="md:p-2">
+            </Link>
+            <Link href="#gallery" className="md:p-2">
               Gallery
-            </a>
-            <a href="#about" className="md:p-2">
+            </Link>
+            <Link href="#about" className="md:p-2">
               About Us
-            </a>
-            <a href="#contact" className="md:p-2">
+            </Link>
+            <Link href="#contact" className="md:p-2">
               Contact
-            </a>
+            </Link>
           </div>
 
           {/* CTA (Desktop Only) */}
@@ -56,21 +57,21 @@ const NavBar = () => {
       {/* Mobile Menu Dropdown */}
       {isOpen && (
         <div className="md:hidden w-fit h-fit flex flex-col font-baskervvilleSC">
-          <a href="#hero" className="p-2">
+          <Link href="#hero" className="p-2">
             Home
-          </a>
-          <a href="#events" className="p-2">
+          </Link>
+          <Link href="#events" className="p-2">
             Events
-          </a>
-          <a href="#gallery" className="p-2">
+          </Link>
+          <Link href="#gallery" className="p-2">
             Gallery
-          </a>
-          <a href="#about" className="p-2">
+          </Link>
+          <Link href="#about" className="p-2">
             About Us
-          </a>
-          <a href="#contact" className="p-2">
+          </Link>
+          <Link href="#contact" className="p-2">
             Contact
-          </a>
+          </Link>
           <button className="bg-[#F7EBD5] text-[#061517] px-3 py-5 font-baskervville font-normal text-xl leading-7 tracking-[0.2%]">
             Discover Events
           </button>
