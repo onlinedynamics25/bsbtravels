@@ -77,6 +77,10 @@ export default async function handler(
         Industry: ${fields.industry}
         Purpose: ${fields.purpose}
 
+        Payment Method: ${fields.paymentMethod}
+        Deposit: ${fields.deposit}
+        Balance Due: ${fields.balanceDue}
+
         Declaration Date: ${fields.declarationDate}
       `,
       attachments,

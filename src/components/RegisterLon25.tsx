@@ -27,6 +27,11 @@ const RegisterLon25 = () => {
   const [purpose, setPurpose] = useState("");
   const [otherPurpose, setOtherPurpose] = useState("");
 
+  // Payment Details
+  const [paymentMethod, setPaymentMethod] = useState("");
+  const [deposit, setDeposit] = useState("");
+  const [balanceDue, setBalanceDue] = useState("");
+
   // Declaration
   const [signature, setSignature] = useState<File | null>(null);
   const [declarationDate, setDeclarationDate] = useState("");
@@ -58,6 +63,9 @@ const RegisterLon25 = () => {
     formData.append("companyName", companyName);
     formData.append("industry", industry);
     formData.append("purpose", purpose === "other" ? otherPurpose : purpose);
+    formData.append("paymentMethod", paymentMethod);
+    formData.append("deposit", deposit);
+    formData.append("balanceDue", balanceDue);
     formData.append("declarationDate", declarationDate);
     if (signature) {
       formData.append("signature", signature);
@@ -348,6 +356,55 @@ const RegisterLon25 = () => {
               showOtherInput={true}
               otherValue={otherPurpose}
               onOtherChange={(e) => setOtherPurpose(e.target.value)}
+              className="flex flex-row bg-[#C9C3B6] my-2 px-4"
+              labelClassName="px-4 py-4"
+              inputClassName="outline-none border-s-2 border-[#2B1F09] px-4 py-4"
+            />
+          </div>
+        </section>
+
+        {/* Payment Details */}
+        <section>
+          <h2 className="font-baskervvilleSC font-bold lg:text-4xl">
+            Payment Details
+          </h2>
+          <div className="text-xl flex flex-col gap-4">
+            <Input
+              id="payment-method"
+              label="Payment Method"
+              type="radio"
+              required={true}
+              value={paymentMethod}
+              onChange={(e) => setPaymentMethod(e.target.value)}
+              options={[
+                { label: "Bank", value: "bank" },
+                { label: "Card", value: "card" },
+                { label: "Other", value: "other" },
+              ]}
+              className="flex flex-row bg-[#C9C3B6] my-2 px-4"
+              labelClassName="px-4 py-4"
+              inputClassName="outline-none border-s-2 border-[#2B1F09] px-4 py-4"
+            />
+            <Input
+              id="deposit"
+              label="Deposit (₦ or €)"
+              type="text"
+              placeholder="Enter deposit amount"
+              required={true}
+              value={deposit}
+              onChange={(e) => setDeposit(e.target.value)}
+              className="flex flex-row bg-[#C9C3B6] my-2 px-4"
+              labelClassName="px-4 py-4"
+              inputClassName="outline-none border-s-2 border-[#2B1F09] px-4 py-4"
+            />
+            <Input
+              id="balance-due"
+              label="Balance Due"
+              type="text"
+              placeholder="Enter balance due"
+              required={true}
+              value={balanceDue}
+              onChange={(e) => setBalanceDue(e.target.value)}
               className="flex flex-row bg-[#C9C3B6] my-2 px-4"
               labelClassName="px-4 py-4"
               inputClassName="outline-none border-s-2 border-[#2B1F09] px-4 py-4"

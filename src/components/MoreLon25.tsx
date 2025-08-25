@@ -1,4 +1,3 @@
-import Link from "next/link";
 import React, { useState } from "react";
 import Modal from "./Modal";
 import RegisterLon25 from "./RegisterLon25";
@@ -6,7 +5,7 @@ import RegisterLon25 from "./RegisterLon25";
 const MoreLon25 = () => {
   const [showRegisterModal, setShowRegisterModal] = useState(false);
   return (
-    <section id="moreLon25" className="py-6 px-20">
+    <section id="moreLon25" className="py-6 px-20 text-xl">
       <h1 className="text-5xl font-playfair uppercase font-black mb-4 text-center">
         Overview of London 2025 Experience
       </h1>
