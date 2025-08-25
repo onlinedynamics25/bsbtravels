@@ -39,31 +39,45 @@ const RegisterLon25 = () => {
   };
 
   // Handle form submission
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Gather all form data here for submission
-    const formData = {
-      participantName,
-      participantDob,
-      gender,
-      passportNo,
-      expiryDate,
-      nationality,
-      contactEmail,
-      contactNumber,
-      contactAddress,
-      roomType,
-      bonfire,
-      airportPick,
-      companyName,
-      industry,
-      purpose: purpose === "other" ? otherPurpose : purpose,
-      signature,
-      declarationDate,
-    };
-    // You can now send formData to your backend or service
-    console.log(formData);
-    alert("Form submitted! (Implement backend to send data.)");
+
+    const formData = new FormData();
+    formData.append("participantName", participantName);
+    formData.append("participantDob", participantDob);
+    formData.append("gender", gender);
+    formData.append("passportNo", passportNo);
+    formData.append("expiryDate", expiryDate);
+    formData.append("nationality", nationality);
+    formData.append("contactEmail", contactEmail);
+    formData.append("contactNumber", contactNumber);
+    formData.append("contactAddress", contactAddress);
+    formData.append("roomType", roomType);
+    formData.append("bonfire", bonfire);
+    formData.append("airportPick", airportPick);
+    formData.append("companyName", companyName);
+    formData.append("industry", industry);
+    formData.append("purpose", purpose === "other" ? otherPurpose : purpose);
+    formData.append("declarationDate", declarationDate);
+    if (signature) {
+      formData.append("signature", signature);
+    }
+
+    try {
+      const response = await fetch("/api/register", {
+        method: "POST",
+        body: formData,
+      });
+
+      if (response.ok) {
+        alert("Registration submitted successfully!");
+        // Optionally reset form fields here
+      } else {
+        alert("Failed to submit registration. Please try again.");
+      }
+    } catch (error) {
+      alert("An error occurred. Please try again.");
+    }
   };
 
   return (
