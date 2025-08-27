@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const Hero = () => {
@@ -20,9 +21,11 @@ const Hero = () => {
         </p>
 
         {/* CTA Button */}
-        <button className="mt-[86px] px-5 py-3 bg-[#061517] text-[#F7EBD5] text-xl leading-7 -tracking-tight hover:bg-[#F7EBD5] hover:text-[#061517] transition ">
-          Register For An Event Now
-        </button>
+        <Link href="#events">
+          <button className="mt-20 px-5 py-3 cursor-pointer bg-[#061517] text-[#F7EBD5] text-xl leading-7 -tracking-tight hover:bg-[#F7EBD5] hover:text-[#061517] transition ">
+            Register For An Event Now
+          </button>
+        </Link>
       </div>
     </section>
   );

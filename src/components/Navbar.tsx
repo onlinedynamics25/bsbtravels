@@ -23,7 +23,7 @@ const NavBar = () => {
           <div className=" hidden md:flex space-x-0 font-baskervvilleSC text-[#F7EBD5] text-xl leading-7 tracking-[0.2%]">
             <Link
               href="#hero"
-              className="focus:border-b-4 focus:border-[#B58124] md:p-2"
+              className="hover:text-[#B58124] focus:border-b-4 focus:border-[#B58124] md:p-2"
             >
               Home
             </Link>
@@ -55,9 +55,11 @@ const NavBar = () => {
 
           {/* CTA (Desktop Only) */}
           <div className="hidden md:block">
-            <button className="md:px-5 md:py-3 bg-[#F7EBD5] text-[#061517] font-baskervville font-normal text-xl leading-7 tracking-[0.2%]">
-              Discover Events
-            </button>
+            <Link href="#events">
+              <button className="md:px-5 md:py-3 cursor-pointer bg-[#F7EBD5] text-[#061517] font-baskervville font-normal text-xl leading-7 tracking-[0.2%] hover:bg-[#B58124] hover:font-bold transition">
+                Discover Events
+              </button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -102,9 +104,11 @@ const NavBar = () => {
           >
             Contact
           </Link>
-          <button className="bg-[#F7EBD5] text-[#061517] px-3 py-5 font-baskervville font-normal text-xl leading-7 tracking-[0.2%]">
-            Discover Events
-          </button>
+          <Link href="#events">
+            <button className="bg-[#F7EBD5] text-[#061517] px-3 py-5 cursor-pointer font-baskervville font-normal text-xl leading-7 tracking-[0.2%] hover:bg-[#061517] hover:text-[#F7EBD5] transition">
+              Discover Events
+            </button>
+          </Link>
         </div>
       )}
     </nav>
