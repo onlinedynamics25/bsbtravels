@@ -21,19 +21,34 @@ const NavBar = () => {
 
           {/* Desktop Nav Links */}
           <div className=" hidden md:flex space-x-0 font-baskervvilleSC text-[#F7EBD5] text-xl leading-7 tracking-[0.2%]">
-            <Link href="#hero" className="md:p-2">
+            <Link
+              href="#hero"
+              className="focus:border-b-4 focus:border-[#B58124] md:p-2"
+            >
               Home
             </Link>
-            <Link href="#events" className="md:p-2">
+            <Link
+              href="#events"
+              className="focus:border-b-4 focus:border-[#B58124] md:p-2"
+            >
               Events
             </Link>
-            <Link href="#gallery" className="md:p-2">
+            <Link
+              href="#gallery"
+              className="focus:border-b-4 focus:border-[#B58124] md:p-2"
+            >
               Gallery
             </Link>
-            <Link href="#about" className="md:p-2">
+            <Link
+              href="#about"
+              className="focus:border-b-4 focus:border-[#B58124] md:p-2"
+            >
               About Us
             </Link>
-            <Link href="#contact" className="md:p-2">
+            <Link
+              href="#contact"
+              className="focus:border-b-4 focus:border-[#B58124] md:p-2"
+            >
               Contact
             </Link>
           </div>
@@ -57,19 +72,34 @@ const NavBar = () => {
       {/* Mobile Menu Dropdown */}
       {isOpen && (
         <div className="md:hidden w-fit h-fit flex flex-col font-baskervvilleSC">
-          <Link href="#hero" className="p-2">
+          <Link
+            href="#hero"
+            className="focus:border-b-4 focus:border-[#B58124] p-2"
+          >
             Home
           </Link>
-          <Link href="#events" className="p-2">
+          <Link
+            href="#events"
+            className="focus:border-b-4 focus:border-[#B58124] p-2"
+          >
             Events
           </Link>
-          <Link href="#gallery" className="p-2">
+          <Link
+            href="#gallery"
+            className="focus:border-b-4 focus:border-[#B58124] p-2"
+          >
             Gallery
           </Link>
-          <Link href="#about" className="p-2">
+          <Link
+            href="#about"
+            className="focus:border-b-4 focus:border-[#B58124] p-2"
+          >
             About Us
           </Link>
-          <Link href="#contact" className="p-2">
+          <Link
+            href="#contact"
+            className="focus:border-b-4 focus:border-[#B58124] p-2"
+          >
             Contact
           </Link>
           <button className="bg-[#F7EBD5] text-[#061517] px-3 py-5 font-baskervville font-normal text-xl leading-7 tracking-[0.2%]">
