@@ -43,11 +43,11 @@ export default async function handler(
 
     // Prepare attachment if signature is present
     let attachments = [];
-    if (files.signature) {
+    if (files.signature && files.signature.filepath) {
       const file = files.signature;
       const fileData = await fs.readFile(file.filepath);
       attachments.push({
-        filename: file.originalFilename,
+        filename: file.originalFilename || "signature.png",
         content: fileData,
       });
     }
@@ -92,7 +92,10 @@ export default async function handler(
       .status(200)
       .json({ message: "Registration submitted successfully!" });
   } catch (error) {
-    console.error(error);
-    return res.status(500).json({ error: "Failed to send registration" });
+    console.error("Registration error:", error);
+    return res.status(500).json({
+      error: "Failed to send registration",
+      details: error instanceof Error ? error.message : "Unknown error",
+    });
   }
 }

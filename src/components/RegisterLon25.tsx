@@ -1,5 +1,6 @@
 "use client";
 import Input from "@/components/Input";
+import NotificationModal from "@/components/NotificationModal";
 import React, { useState } from "react";
 
 const RegisterLon25 = () => {
@@ -37,7 +38,11 @@ const RegisterLon25 = () => {
   const [declarationDate, setDeclarationDate] = useState("");
 
   const [loading, setLoading] = useState(false);
-  
+  const [notification, setNotification] = useState({
+    open: false,
+    type: "success" as "success" | "error",
+    message: "",
+  });
 
   // Handle file input
   const handleSignatureChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -50,7 +55,6 @@ const RegisterLon25 = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
-    
 
     const formData = new FormData();
     formData.append("participantName", participantName);
@@ -83,20 +87,39 @@ const RegisterLon25 = () => {
       });
 
       if (response.ok) {
-        alert("Registration submitted successfully!");
+        setNotification({
+          open: true,
+          type: "success",
+          message: "Registration submitted successfully!",
+        });
         // Optionally reset form fields here
       } else {
-        alert("Failed to submit registration. Please try again.");
+        setNotification({
+          open: true,
+          type: "error",
+          message: "Failed to submit registration. Please try again.",
+        });
       }
     } catch (error) {
-      alert("An error occurred. Please try again.");
+      setNotification({
+        open: true,
+        type: "error",
+        message: "An error occurred. Please try again.",
+      });
     } finally {
-    setLoading(false)
-      }
+      setLoading(false);
+    }
   };
 
   return (
     <div className="font-baskervville bg-[#D2E1E3] shadow-lg p-6 text-[#2B1F09]">
+      {/* Notification Modal */}
+      <NotificationModal
+        open={notification.open}
+        onClose={() => setNotification({ ...notification, open: false })}
+        type={notification.type}
+        message={notification.message}
+      />
       {/* Header */}
       <header className="text-center mb-8 text-[#2B1F09]">
         <div className="flex flex-row items-center justify-center gap-2 mb-6">
@@ -147,9 +170,9 @@ const RegisterLon25 = () => {
               required={true}
               value={participantName}
               onChange={(e) => setParticipantName(e.target.value)}
-              className="flex flex-row bg-[#C9C3B6]  my-2"
+              className="flex flex-row bg-[#C9C3B6] my-2"
               labelClassName="px-4 py-4"
-              inputClassName="outline-none border-s-2 border-[#2B1F09] px-4 py-4"
+              inputClassName="outline-none border-s-2 border-[#2B1F09] px-4 py-4 w-full"
             />
             <div className="flex flex-row items-center justify-between gap-8">
               <Input
@@ -161,7 +184,7 @@ const RegisterLon25 = () => {
                 onChange={(e) => setParticipantDob(e.target.value)}
                 className="flex flex-row bg-[#C9C3B6]  my-2 w-full"
                 labelClassName="px-4 py-4"
-                inputClassName="outline-none border-s-2 border-[#2B1F09] px-4 py-4"
+                inputClassName="outline-none border-s-2 border-[#2B1F09] px-4 py-4 w-full"
               />
               <Input
                 id="gender"
@@ -176,7 +199,7 @@ const RegisterLon25 = () => {
                 ]}
                 className="flex flex-row bg-[#C9C3B6]  my-2 w-full"
                 labelClassName="px-4 py-4"
-                inputClassName="outline-none border-s-2 border-[#2B1F09] px-4 py-4"
+                inputClassName="outline-none border-s-2 border-[#2B1F09] px-4 py-4 w-full"
               />
             </div>
             <div className="flex flex-row items-center justify-between gap-8">
@@ -189,7 +212,7 @@ const RegisterLon25 = () => {
                 onChange={(e) => setPassportNo(e.target.value)}
                 className="flex flex-row bg-[#C9C3B6]  my-2 basis-2/3"
                 labelClassName="px-4 py-4"
-                inputClassName="outline-none border-s-2 border-[#2B1F09] px-4 py-4"
+                inputClassName="outline-none border-s-2 border-[#2B1F09] px-4 py-4 w-full"
               />
               <Input
                 id="expiry-date"
@@ -200,7 +223,7 @@ const RegisterLon25 = () => {
                 onChange={(e) => setExpiryDate(e.target.value)}
                 className="flex flex-row bg-[#C9C3B6]  my-2 w-full basis-1/3"
                 labelClassName="px-4 py-4"
-                inputClassName="outline-none border-s-2 border-[#2B1F09] px-4 py-4"
+                inputClassName="outline-none border-s-2 border-[#2B1F09] px-4 py-4 w-full"
               />
             </div>
             <Input
@@ -212,7 +235,7 @@ const RegisterLon25 = () => {
               onChange={(e) => setNationality(e.target.value)}
               className="flex flex-row bg-[#C9C3B6]  my-2"
               labelClassName="px-4 py-4"
-              inputClassName="outline-none border-s-2 border-[#2B1F09] px-4 py-4"
+              inputClassName="outline-none border-s-2 border-[#2B1F09] px-4 py-4 w-full"
             />
           </div>
         </section>
@@ -233,7 +256,7 @@ const RegisterLon25 = () => {
               onChange={(e) => setContactEmail(e.target.value)}
               className="flex flex-row bg-[#C9C3B6]  my-2"
               labelClassName="px-4 py-4"
-              inputClassName="outline-none border-s-2 border-[#2B1F09] px-4 py-4"
+              inputClassName="outline-none border-s-2 border-[#2B1F09] px-4 py-4 w-full"
             />
             <Input
               id="contact-number"
@@ -243,9 +266,9 @@ const RegisterLon25 = () => {
               required={true}
               value={contactNumber}
               onChange={(e) => setContactNumber(e.target.value)}
-              className="flex flex-row bg-[#C9C3B6]  my-2"
-              labelClassName="px-4 py-4"
-              inputClassName="outline-none border-s-2 border-[#2B1F09] px-4 py-4"
+              className="flex flex-row bg-[#C9C3B6] my-2"
+              labelClassName="px-4 py-4 w-2xs"
+              inputClassName="outline-none border-s-2 border-[#2B1F09] px-4 py-4 w-full"
             />
             <Input
               id="contact-address"
@@ -257,7 +280,7 @@ const RegisterLon25 = () => {
               onChange={(e) => setContactAddress(e.target.value)}
               className="flex flex-row bg-[#C9C3B6]  my-2"
               labelClassName="px-4 py-4"
-              inputClassName="outline-none border-s-2 border-[#2B1F09] px-4 py-4"
+              inputClassName="outline-none border-s-2 border-[#2B1F09] px-4 py-4 w-full"
             />
           </div>
         </section>
@@ -282,7 +305,7 @@ const RegisterLon25 = () => {
               ]}
               className="flex flex-row bg-[#C9C3B6] my-2 px-4"
               labelClassName="px-4 py-4"
-              inputClassName="outline-none border-s-2 border-[#2B1F09] px-4 py-4"
+              inputClassName="outline-none border-s-2 border-[#2B1F09] px-4 py-4 w-full"
             />
             <Input
               id="bonfire"
@@ -297,7 +320,7 @@ const RegisterLon25 = () => {
               ]}
               className="flex flex-row bg-[#C9C3B6] my-2 px-4"
               labelClassName="px-4 py-4"
-              inputClassName="outline-none border-s-2 border-[#2B1F09] px-4 py-4"
+              inputClassName="outline-none border-s-2 border-[#2B1F09] px-4 py-4 w-full"
             />
             <Input
               id="airport-pick"
@@ -312,7 +335,7 @@ const RegisterLon25 = () => {
               ]}
               className="flex flex-row bg-[#C9C3B6] my-2 px-4"
               labelClassName="px-4 py-4"
-              inputClassName="outline-none border-s-2 border-[#2B1F09] px-4 py-4"
+              inputClassName="outline-none border-s-2 border-[#2B1F09] px-4 py-4 w-full"
             />
           </div>
         </section>
@@ -333,7 +356,7 @@ const RegisterLon25 = () => {
               onChange={(e) => setCompanyName(e.target.value)}
               className="flex flex-row bg-[#C9C3B6] my-2 px-4"
               labelClassName="px-4 py-4"
-              inputClassName="outline-none border-s-2 border-[#2B1F09] px-4 py-4"
+              inputClassName="outline-none border-s-2 border-[#2B1F09] px-4 py-4 w-full"
             />
             <Input
               id="industry"
@@ -345,7 +368,7 @@ const RegisterLon25 = () => {
               onChange={(e) => setIndustry(e.target.value)}
               className="flex flex-row bg-[#C9C3B6] my-2 px-4"
               labelClassName="px-4 py-4"
-              inputClassName="outline-none border-s-2 border-[#2B1F09] px-4 py-4"
+              inputClassName="outline-none border-s-2 border-[#2B1F09] px-4 py-4 w-full"
             />
             <Input
               id="purpose"
@@ -365,7 +388,7 @@ const RegisterLon25 = () => {
               onOtherChange={(e) => setOtherPurpose(e.target.value)}
               className="flex flex-row bg-[#C9C3B6] my-2 px-4"
               labelClassName="px-4 py-4"
-              inputClassName="outline-none border-s-2 border-[#2B1F09] px-4 py-4"
+              inputClassName="outline-none border-s-2 border-[#2B1F09] px-4 py-4 w-full"
             />
           </div>
         </section>
@@ -390,7 +413,7 @@ const RegisterLon25 = () => {
               ]}
               className="flex flex-row bg-[#C9C3B6] my-2 px-4"
               labelClassName="px-4 py-4"
-              inputClassName="outline-none border-s-2 border-[#2B1F09] px-4 py-4"
+              inputClassName="outline-none border-s-2 border-[#2B1F09] px-4 py-4w-full"
             />
             <Input
               id="deposit"
@@ -402,7 +425,7 @@ const RegisterLon25 = () => {
               onChange={(e) => setDeposit(e.target.value)}
               className="flex flex-row bg-[#C9C3B6] my-2 px-4"
               labelClassName="px-4 py-4"
-              inputClassName="outline-none border-s-2 border-[#2B1F09] px-4 py-4"
+              inputClassName="outline-none border-s-2 border-[#2B1F09] px-4 py-4 w-full"
             />
             <Input
               id="balance-due"
@@ -414,7 +437,7 @@ const RegisterLon25 = () => {
               onChange={(e) => setBalanceDue(e.target.value)}
               className="flex flex-row bg-[#C9C3B6] my-2 px-4"
               labelClassName="px-4 py-4"
-              inputClassName="outline-none border-s-2 border-[#2B1F09] px-4 py-4"
+              inputClassName="outline-none border-s-2 border-[#2B1F09] px-4 py-4 w-full"
             />
           </div>
         </section>
@@ -443,7 +466,7 @@ const RegisterLon25 = () => {
               onChange={handleSignatureChange}
               className="flex flex-row bg-[#C9C3B6] my-2 basis-2/3"
               labelClassName="px-4 py-4"
-              inputClassName="outline-none border-s-2 border-[#2B1F09] px-4 py-4"
+              inputClassName="outline-none border-s-2 border-[#2B1F09] px-4 py-4 w-full"
             />
             <Input
               id="date"
@@ -454,7 +477,7 @@ const RegisterLon25 = () => {
               onChange={(e) => setDeclarationDate(e.target.value)}
               className="flex flex-row bg-[#C9C3B6] my-2 basis-1/3"
               labelClassName="px-4 py-4"
-              inputClassName="outline-none border-s-2 border-[#2B1F09] px-4 py-4"
+              inputClassName="outline-none border-s-2 border-[#2B1F09] px-4 py-4 w-full "
             />
           </div>
         </section>
@@ -464,7 +487,6 @@ const RegisterLon25 = () => {
           disabled={loading}
         >
           {loading ? "Submitting..." : "Submit"}
-
         </button>
       </form>
     </div>

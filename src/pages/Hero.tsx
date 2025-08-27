@@ -11,7 +11,7 @@ const Hero = () => {
       <div className="absolute inset-0 bg-[#E6BC72]/35"></div>
 
       {/* Content */}
-      <div className="relative z-10 text-center px-4">
+      <div className="relative z-10 text-center px-4 mt-32">
         <h1 className="font-playfair text-3xl font-black sm:text-4xl md:text-6xl lg:text-[136px] lg:leading-40 lg:tracking-[-8px]">
           Where Business Meets Luxury Travel
         </h1>
