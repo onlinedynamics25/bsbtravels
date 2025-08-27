@@ -5,7 +5,7 @@ const Hero = () => {
     <section
       id="hero"
       className="relative bg-cover bg-center flex items-center justify-center text-[#061517] pt-32 pb-28"
-      style={{ backgroundImage: "url('/background-images/hero.png')" }}
+      style={{ backgroundImage: "url('/background-images/hero-bg.jpg')" }}
     >
       {/* Overlay */}
       <div className="absolute inset-0 bg-[#E6BC72]/35"></div>
