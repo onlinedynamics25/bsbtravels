@@ -36,6 +36,9 @@ const RegisterLon25 = () => {
   const [signature, setSignature] = useState<File | null>(null);
   const [declarationDate, setDeclarationDate] = useState("");
 
+  const [loading, setLoading] = useState(false);
+  
+
   // Handle file input
   const handleSignatureChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files && e.target.files[0]) {
@@ -46,6 +49,8 @@ const RegisterLon25 = () => {
   // Handle form submission
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setLoading(true);
+    
 
     const formData = new FormData();
     formData.append("participantName", participantName);
@@ -85,7 +90,9 @@ const RegisterLon25 = () => {
       }
     } catch (error) {
       alert("An error occurred. Please try again.");
-    }
+    } finally {
+    setLoading(false)
+      }
   };
 
   return (
@@ -454,8 +461,10 @@ const RegisterLon25 = () => {
         <button
           type="submit"
           className="mt-[86px] px-5 py-3 font-baskervvilleSC font-bold bg-[#061517] text-[#F7EBD5] text-2xl leading-7 -tracking-tight hover:bg-[#91671D] hover:text-[#061517] transition "
+          disabled={loading}
         >
-          Submit
+          {loading ? "Submitting..." : "Submit"}
+
         </button>
       </form>
     </div>
