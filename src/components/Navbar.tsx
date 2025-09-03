@@ -1,15 +1,50 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("hero");
+  const links = [
+    { link: "Home", href: "#" },
+    { link: "Gallery", href: "#gallery" },
+    { link: "Events", href: "#events" },
+    { link: "About Us", href: "#about" },
+    { link: "Contact", href: "#contact" },
+  ];
+
+  useEffect(() => {
+    const sectionIds = links.map((l) => l.href.replace("#", ""));
+    const handleScroll = () => {
+      let found = "";
+      for (const id of sectionIds) {
+        const el = document.getElementById(id);
+        if (el) {
+          const rect = el.getBoundingClientRect();
+          if (rect.top <= 80 && rect.bottom >= 80) {
+            found = id;
+            break;
+          }
+        }
+      }
+      setActiveSection(found);
+
+      // update URL hash when section changes
+      if (window.location.hash !== `#${found}`) {
+        history.replaceState(null, "", `#${found}`);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll();
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <nav className="fixed w-full min-h-20 top-0 left-0 z-50 bg-[#0F363B] backdrop-blur-md text-[#F7EBD5] shadow-md">
-      <div className="mx-auto px-4 sm:px-6 lg:px-8 lg:mx-20 lg:my-3">
-        <div className="flex justify-between items-center h-20">
+    <nav className="fixed w-full min-h-20 top-0 left-0 z-50 font-baskervvilleSC">
+      <div className="">
+        <div className="bg-[#0F363B] backdrop-blur-md text-[#F7EBD5] shadow-md flex justify-between items-center h-24 flex-row-reverse px-6 md:flex-row lg:px-16 ">
           {/* Brand */}
           <div className="flex-shrink-0">
             <img
@@ -20,52 +55,35 @@ const NavBar = () => {
           </div>
 
           {/* Desktop Nav Links */}
-          <div className=" hidden md:flex space-x-0 font-baskervvilleSC text-[#F7EBD5] text-xl leading-7 tracking-[0.2%]">
-            <Link
-              href="#hero"
-              className="hover:text-[#B58124] focus:border-b-4 focus:border-[#B58124] md:p-2"
-            >
-              Home
-            </Link>
-            <Link
-              href="#events"
-              className="focus:border-b-4 focus:border-[#B58124] md:p-2"
-            >
-              Events
-            </Link>
-            <Link
-              href="#gallery"
-              className="focus:border-b-4 focus:border-[#B58124] md:p-2"
-            >
-              Gallery
-            </Link>
-            <Link
-              href="#about"
-              className="focus:border-b-4 focus:border-[#B58124] md:p-2"
-            >
-              About Us
-            </Link>
-            <Link
-              href="#contact"
-              className="focus:border-b-4 focus:border-[#B58124] md:p-2"
-            >
-              Contact
-            </Link>
+          <div className=" hidden md:flex space-x-0 text-[#F7EBD5] text-lg lg:text-xl ">
+            {links.map((link, index) => (
+              <Link
+                key={index}
+                href={link.href}
+                className={`hover:text-[#B58124] hover:font-medium focus:font-bold focus:border-b-4 focus:border-[#B58124] md:p-2 ${
+                  activeSection === link.href.replace("#", "")
+                    ? "border-b-4 border-[#B58124] font-bold"
+                    : ""
+                }`}
+              >
+                {link.link}
+              </Link>
+            ))}
           </div>
 
           {/* CTA (Desktop Only) */}
-          <div className="hidden md:block">
-            <Link href="#events">
-              <button className="md:px-5 md:py-3 cursor-pointer bg-[#F7EBD5] text-[#061517] font-baskervville font-normal text-xl leading-7 tracking-[0.2%] hover:bg-[#B58124] hover:font-bold transition">
-                Discover Events
-              </button>
-            </Link>
-          </div>
+          <button className="hidden md:flex px-6 py-4 cursor-pointer bg-[#F7EBD5] text-[#061517]  text-lg lg:text-xl hover:bg-[#B58124] hover:font-bold transition">
+            <Link href="#events">Discover Events</Link>
+          </button>
 
           {/* Mobile Menu Button */}
-          <div className="md:hidden">
+          <div className="pl-2 md:hidden ">
             <button onClick={() => setIsOpen(!isOpen)}>
-              {isOpen ? <X size={28} /> : <Menu size={28} />}
+              {isOpen ? (
+                <X size={40} className="absolute left-14 top-6 " />
+              ) : (
+                <Menu size={40} />
+              )}
             </button>
           </div>
         </div>
@@ -73,39 +91,18 @@ const NavBar = () => {
 
       {/* Mobile Menu Dropdown */}
       {isOpen && (
-        <div className="md:hidden w-fit h-fit flex flex-col font-baskervvilleSC">
-          <Link
-            href="#hero"
-            className="focus:border-b-4 focus:border-[#B58124] p-2"
-          >
-            Home
-          </Link>
-          <Link
-            href="#events"
-            className="focus:border-b-4 focus:border-[#B58124] p-2"
-          >
-            Events
-          </Link>
-          <Link
-            href="#gallery"
-            className="focus:border-b-4 focus:border-[#B58124] p-2"
-          >
-            Gallery
-          </Link>
-          <Link
-            href="#about"
-            className="focus:border-b-4 focus:border-[#B58124] p-2"
-          >
-            About Us
-          </Link>
-          <Link
-            href="#contact"
-            className="focus:border-b-4 focus:border-[#B58124] p-2"
-          >
-            Contact
-          </Link>
+        <div className="md:hidden w-fit h-fit flex flex-col bg-[#0F363B] backdrop-blur-md text-[#F7EBD5] shadow-md">
+          {links.map((link, index) => (
+            <Link
+              key={index}
+              href={link.href}
+              className="hover:text-[#B58124] focus:border-b-4 focus:border-[#B58124] text-sm p-2 text-center"
+            >
+              {link.link}
+            </Link>
+          ))}
           <Link href="#events">
-            <button className="bg-[#F7EBD5] text-[#061517] px-3 py-5 cursor-pointer font-baskervville font-normal text-xl leading-7 tracking-[0.2%] hover:bg-[#061517] hover:text-[#F7EBD5] transition">
+            <button className="bg-[#F7EBD5] text-[#061517] px-5 py-3 cursor-pointer text-sm hover:bg-[#061517] hover:text-[#F7EBD5] transition">
               Discover Events
             </button>
           </Link>

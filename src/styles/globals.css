@@ -5,3 +5,7 @@
   --font-baskervville: var(--font-baskervville);
   --font-baskervvilleSC: var(--font-baskervvilleSC);
 }
+
+html {
+  scroll-behavior: smooth;
+}
