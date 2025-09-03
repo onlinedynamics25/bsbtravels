@@ -13,7 +13,10 @@ const Gallery = () => {
     { src: "/bsb-london25/bonfire.png", alt: "8" },
   ];
   return (
-    <section id="gallery" className="p-4 min-h-screen ">
+    <section
+      id="gallery"
+      className="p-4 min-h-screen scroll-mt-2 md:pt-24 md:px-6 lg:pt-24 "
+    >
       <h1 className="font-playfair font-black text-center uppercase text-[40px] leading-12 tracking-[10px] pb-8 md:text-[64px] md:leading-[72px]">
         Gallery
       </h1>
