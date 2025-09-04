@@ -1,8 +1,9 @@
+"use client";
 import React, { useState } from "react";
-import Modal from "./Modal";
-import RegisterLon25 from "./RegisterLon25";
+import Modal from "@/components/Modal";
+import RegisterLon25 from "@/components/RegisterLon25";
 
-const MoreLon25 = () => {
+const MoreLondon25 = () => {
   const [showRegisterModal, setShowRegisterModal] = useState(false);
   return (
     <section id="moreLon25" className="py-6 px-20 text-xl">
@@ -135,4 +136,4 @@ const MoreLon25 = () => {
   );
 };
 
-export default MoreLon25;
+export default MoreLondon25;

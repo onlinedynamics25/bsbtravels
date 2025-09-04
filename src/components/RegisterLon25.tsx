@@ -93,6 +93,26 @@ const RegisterLon25 = () => {
           message: "Registration submitted successfully!",
         });
         // Optionally reset form fields here
+        setParticipantName("");
+        setParticipantDob("");
+        setGender("");
+        setPassportNo("");
+        setExpiryDate("");
+        setNationality("");
+        setContactEmail("");
+        setCompanyName("");
+        setContactAddress("");
+        setRoomType("");
+        setBonfire("");
+        setAirportPick("");
+        setCompanyName("");
+        setIndustry("");
+        setPurpose("");
+        setPaymentMethod("");
+        setDeposit("");
+        setBalanceDue("");
+        setDeclarationDate("");
+        setSignature(null);
       } else {
         setNotification({
           open: true,

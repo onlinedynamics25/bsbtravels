@@ -1,6 +1,11 @@
-import React from "react";
+"use client";
+import Link from "next/link";
+import React, { useState } from "react";
+import Modal from "./Modal";
+import MoreLondon25 from "./MoreLondon25";
 
 const Events = () => {
+  const [showRegisterModal, setShowRegisterModal] = useState(false);
   const events = [
     {
       title: "London BSB Travels 2025",
@@ -9,7 +14,7 @@ const Events = () => {
       date: "November 3 - 10",
       location: "London",
       status: "Registration is ongoing",
-      button: "Learn more",
+      text: "Learn More",
     },
     {
       title: "Event 2",
@@ -17,7 +22,7 @@ const Events = () => {
       date: "TBA",
       location: "TBA",
       status: "Upcoming",
-      button: "Learn more",
+      text: "...",
     },
     {
       title: "Past Event Recap",
@@ -25,25 +30,55 @@ const Events = () => {
       date: "TBA",
       location: "TBA",
       status: "Upcoming",
-      button: "Learn more",
+      text: "...",
     },
   ];
   return (
     <section
       id="events"
-      className="min-h-screen px-3 pt-16 scroll-mt-2 md:pt-24 md:px-6 lg:pt-24 "
+      className="min-h-screen px-3 pt-16 scroll-mt-2 bg-[#6D4E16] md:pt-16 md:px-6 md:min-h-fit md:pb-4 "
     >
-      <h1 className="font-playfair font-black text-center uppercase text-[40px] leading-12 tracking-[10px] pb-8 md:text-[64px] md:leading-[72px]">
+      <h1 className="font-playfair font-black text-center uppercase text-[#F6F1E6] text-[40px] leading-12 tracking-[10px] pb-8 md:text-[64px] md:leading-[72px]">
         Events
       </h1>
-      <div>
+      <div className=" ">
         {events.map((event, index) => (
-          <div key={index}>
-            <h2>{event.title} </h2>
-            <p>{event.description} </p>
+          <div
+            key={index}
+            className={` bg-[#F2DEB8] px-3 py-4 backdrop-blur-md mb-4 flex flex-col md:flex-row md:justify-between md: ${
+              index % 2 === 0 ? "  " : "bg-[#F6F1E6] "
+            } `}
+          >
+            <div className="font-semibold basis-2/3 ">
+              <h2 className="uppercase font-bold text-lg md:text-2xl lg:text-3xl ">
+                {event.title}{" "}
+              </h2>
+              <p className="md:text-lg lg:text-2xl ">{event.description} </p>
+              <p className="text-red-600 font-light italic ">{event.status} </p>
+            </div>
+            <div className="font-semibold  text-right basis-1/3 ">
+              <p className="font-baskervvilleSC md:text-lg lg:text-2xl ">
+                {event.date}{" "}
+              </p>
+              <p className="font-baskervvilleSC mb-2 md:text-lg lg:text-2xl ">
+                {event.location}{" "}
+              </p>
+              <button
+                onClick={() => setShowRegisterModal(true)}
+                className="font-baskervvilleSC font-normal bg-[#504E49] text-[#F6F1E6] px-4 py-2 lg:text-xl "
+              >
+                {event.text}
+              </button>
+            </div>
           </div>
         ))}
       </div>
+      <Modal
+        open={showRegisterModal}
+        onClose={() => setShowRegisterModal(false)}
+      >
+        <MoreLondon25 />
+      </Modal>
     </section>
   );
 };

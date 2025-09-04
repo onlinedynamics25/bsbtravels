@@ -44,7 +44,7 @@ const NavBar = () => {
   return (
     <nav className="fixed w-full min-h-20 top-0 left-0 z-50 font-baskervvilleSC">
       <div className="">
-        <div className="bg-[#0F363B] backdrop-blur-md text-[#F7EBD5] shadow-md flex justify-between items-center h-24 flex-row-reverse px-6 md:flex-row lg:px-16 ">
+        <div className="bg-[#0F363B] backdrop-blur-md text-[#F7EBD5] shadow-md flex justify-between items-center h-24 flex-row-reverse px-6 lg:px-16 ">
           {/* Brand */}
           <div className="flex-shrink-0">
             <img
@@ -71,19 +71,10 @@ const NavBar = () => {
             ))}
           </div>
 
-          {/* CTA (Desktop Only) */}
-          <button className="hidden md:flex px-6 py-4 cursor-pointer bg-[#F7EBD5] text-[#061517]  text-lg lg:text-xl hover:bg-[#B58124] hover:font-bold transition">
-            <Link href="#events">Discover Events</Link>
-          </button>
-
           {/* Mobile Menu Button */}
           <div className="pl-2 md:hidden ">
             <button onClick={() => setIsOpen(!isOpen)}>
-              {isOpen ? (
-                <X size={40} className="absolute left-14 top-6 " />
-              ) : (
-                <Menu size={40} />
-              )}
+              {isOpen ? <X size={40} /> : <Menu size={40} />}
             </button>
           </div>
         </div>
@@ -91,21 +82,16 @@ const NavBar = () => {
 
       {/* Mobile Menu Dropdown */}
       {isOpen && (
-        <div className="md:hidden w-fit h-fit flex flex-col bg-[#0F363B] backdrop-blur-md text-[#F7EBD5] shadow-md">
+        <div className="md:hidden max-w-fit h-fit flex flex-col bg-[#0F363B] backdrop-blur-md text-[#F7EBD5] shadow-md">
           {links.map((link, index) => (
             <Link
               key={index}
               href={link.href}
-              className="hover:text-[#B58124] focus:border-b-4 focus:border-[#B58124] text-sm p-2 text-center"
+              className="hover:text-[#B58124] focus:border-b-4 focus:border-[#B58124] text-sm px-7 py-4 text-center"
             >
               {link.link}
             </Link>
           ))}
-          <Link href="#events">
-            <button className="bg-[#F7EBD5] text-[#061517] px-5 py-3 cursor-pointer text-sm hover:bg-[#061517] hover:text-[#F7EBD5] transition">
-              Discover Events
-            </button>
-          </Link>
         </div>
       )}
     </nav>
