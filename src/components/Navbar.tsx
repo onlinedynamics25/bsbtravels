@@ -1,13 +1,15 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("hero");
+  const menuRef = useRef<HTMLDivElement>(null);
+
   const links = [
-    { link: "Home", href: "#" },
+    { link: "Home", href: "/" },
     { link: "Gallery", href: "#gallery" },
     { link: "Events", href: "#events" },
     { link: "About Us", href: "#about" },
@@ -15,6 +17,13 @@ const NavBar = () => {
   ];
 
   useEffect(() => {
+    // ✅ Force page back to home on refresh
+    if (typeof window !== "undefined") {
+      history.replaceState(null, "", "#"); // clears hash so it's Home
+      setActiveSection("hero");
+      window.scrollTo({ top: 0, behavior: "instant" });
+    }
+
     const sectionIds = links.map((l) => l.href.replace("#", ""));
     const handleScroll = () => {
       let found = "";
@@ -41,14 +50,39 @@ const NavBar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // ✅ Close mobile menu when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
+        setIsOpen(false);
+      }
+    };
+
+    const handleEsc = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setIsOpen(false);
+      }
+    };
+
+    if (isOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+      document.addEventListener("keydown", handleEsc);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("keydown", handleEsc);
+    };
+  }, [isOpen]);
+
   return (
-    <nav className="fixed w-full min-h-20 top-0 left-0 z-50 font-baskervvilleSC">
+    <nav className="fixed w-full min-h-fit top-0 left-0 z-50 font-baskervvilleSC">
       <div className="">
-        <div className="bg-[#0F363B] backdrop-blur-md text-[#F7EBD5] shadow-md flex justify-between items-center h-24 flex-row-reverse px-6 lg:px-16 ">
+        <div className="bg-[#0F363B] backdrop-blur-md text-[#F7EBD5] shadow-md flex justify-between items-center flex-row-reverse px-6 py-2 lg:px-16 ">
           {/* Brand */}
           <div className="flex-shrink-0">
             <img
-              className="p-3 w-20 rounded-full"
+              className="p-3 w-16 md:w-20 rounded-full"
               src="/bsb-logo.jpg"
               alt="BSB LOGO"
             />
@@ -60,10 +94,10 @@ const NavBar = () => {
               <Link
                 key={index}
                 href={link.href}
-                className={`hover:text-[#B58124] hover:font-medium focus:font-bold focus:border-b-4 focus:border-[#B58124] md:p-2 ${
+                className={`hover:text-[#B58124] hover:font-medium transition-colors duration-300 focus:font-bold focus:border-b-4 focus:border-[#B58124] md:p-2 ${
                   activeSection === link.href.replace("#", "")
-                    ? "border-b-4 border-[#B58124] font-bold"
-                    : ""
+                    ? "border-b-4 border-[#B58124] font-bold transition-colors duration-300"
+                    : "transition-colors duration-300 "
                 }`}
               >
                 {link.link}
@@ -72,9 +106,9 @@ const NavBar = () => {
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="pl-2 md:hidden ">
+          <div className="pl-2 md:hidden transition-colors duration-300">
             <button onClick={() => setIsOpen(!isOpen)}>
-              {isOpen ? <X size={40} /> : <Menu size={40} />}
+              {isOpen ? <X size={38} /> : <Menu size={38} />}
             </button>
           </div>
         </div>
@@ -82,12 +116,15 @@ const NavBar = () => {
 
       {/* Mobile Menu Dropdown */}
       {isOpen && (
-        <div className="md:hidden max-w-fit h-fit flex flex-col bg-[#0F363B] backdrop-blur-md text-[#F7EBD5] shadow-md">
+        <div
+          ref={menuRef}
+          className="md:hidden transition-colors duration-300 max-w-fit h-fit flex flex-col bg-[#0F363B] backdrop-blur-md text-[#F7EBD5] shadow-md"
+        >
           {links.map((link, index) => (
             <Link
               key={index}
               href={link.href}
-              className="hover:text-[#B58124] focus:border-b-4 focus:border-[#B58124] text-sm px-7 py-4 text-center"
+              className="hover:text-[#B58124] transition-colors duration-300 focus:border-b-4 focus:border-[#B58124] text-sm px-7 py-4 text-center"
             >
               {link.link}
             </Link>

@@ -8,15 +8,15 @@ const About = () => {
   return (
     <section
       id="about"
-      className="p-4 w-full min-h-fit scroll-mt-2 md:pt-24 md:px-6 lg:pt-24 flex flex-col"
+      className="py-4 px-3 w-full min-h-fit scroll-mt-16 md:px-6 flex flex-col"
     >
-      <h1 className="font-playfair font-black text-center uppercase text-[#061517] text-[40px] leading-12 tracking-[10px] pb-8 md:text-[64px] md:leading-[72px]">
+      <h1 className="font-playfair font-black text-center uppercase text-3xl tracking-[10px] pb-2 md:text-[64px] md:leading-[72px]">
         About Us
       </h1>
 
       {/* Who We Are */}
-      <div className="mb-8 text-2xl">
-        <p className="mb-4">
+      <div className="text-xl text-center md:text-justify md:text-2xl">
+        <p className="mb-1">
           BSB Travel Concepts is a dynamic travel and migration solutions
           company, dedicated to helping individuals, families, professionals,
           and businesses explore the world with ease. We specialise in Business

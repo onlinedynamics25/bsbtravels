@@ -35,7 +35,7 @@ const MoreAbout = () => {
       <div className="mb-8">
         <h3 className="text-xl font-semibold mb-2">Our Vision</h3>
         <p>
-          To be Africa’s leading travel partner — recognised for excellence,
+          To be Africa’s leading travel partner — recognized for excellence,
           integrity, and creativity in connecting people with destinations and
           possibilities worldwide.
         </p>
@@ -62,7 +62,7 @@ const MoreAbout = () => {
             curated holiday escapes.
           </li>
           <li>
-            Specialised Travel Experiences – From world festivals and city tours
+            Specialized Travel Experiences – From world festivals and city tours
             to trade missions and professional exchanges.
           </li>
         </ul>

@@ -60,7 +60,7 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="p-4 bg-[#6D4E16] min-h-fit scroll-mt-2 pb-8 md:pt-24 md:px-6 lg:pt-24 "
+      className="p-4 bg-[#6D4E16] min-h-fit scroll-mt-16 md:px-6 "
     >
       {/* Notification Modal */}
       <NotificationModal

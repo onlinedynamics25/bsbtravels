@@ -13,7 +13,7 @@ const Events = () => {
         "Business Supporting Business Travel Market, London Sights and Sounds",
       date: "November 3 - 10",
       location: "London",
-      status: "Registration is ongoing",
+      status: "Registration closes 15th September, 2025",
       text: "Learn More",
     },
     {
@@ -36,9 +36,9 @@ const Events = () => {
   return (
     <section
       id="events"
-      className="min-h-screen px-3 pt-16 scroll-mt-2 bg-[#6D4E16] md:pt-16 md:px-6 md:min-h-fit md:pb-4 "
+      className="min-h-screen p-3 scroll-mt-16 bg-[#6D4E16] md:px-6 "
     >
-      <h1 className="font-playfair font-black text-center uppercase text-[#F6F1E6] text-[40px] leading-12 tracking-[10px] pb-8 md:text-[64px] md:leading-[72px]">
+      <h1 className="font-playfair font-black text-center text-[#F6F1E6] uppercase text-3xl tracking-[10px] pb-2 md:text-[64px] md:leading-[72px]">
         Events
       </h1>
       <div className=" ">

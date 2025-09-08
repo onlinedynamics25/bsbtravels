@@ -101,23 +101,13 @@ const MoreLondon25 = () => {
               alt={activity.title}
               width={200}
               height={150}
+              className="object-contain"
             />
-            <div
-              className={`${
-                index % 2 === 0 ? " " : "md:text-right lg:text-left"
-              }`}
-            >
+            <div>
               <span className="font-semibold text-base pb-4 lg:text-xl ">
                 {activity.title}
               </span>
-              <ul
-                dir="ltr"
-                className={`list-disc ml-6 text-sm ${
-                  index % 2 === 0
-                    ? " ml-6  "
-                    : " mr-6 space-y-2 md:[direction:rtl]"
-                }`}
-              >
+              <ul className="list-disc ml-6 text-sm space-y-2">
                 {activity.items.map((item, i) => (
                   <li key={i}>{item}</li>
                 ))}
