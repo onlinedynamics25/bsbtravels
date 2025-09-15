@@ -1,38 +1,85 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# BSB Travel Concepts Website
+
+This is a professional business website built with [Next.js](https://nextjs.org), featuring information and contact.
+
+## Features
+
+- **Modern UI:** Responsive design using Tailwind CSS and custom fonts.
+- **Business Info:** Details for multiple businesses, including address, contact, and services.
+- **Contact Form:** Users can send messages directly to the business email via EmailJS integration.
+- **Embedded Maps:** Google Maps for business locations.
+- **Social Links:** Quick access to business social media.
+- **Accessible Navigation:** Fixed navbar and smooth section scrolling.
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- [Node.js](https://nodejs.org/) (v18 or later recommended)
+- [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
+
+### Installation
+
+1. **Clone the repository:**
+
+   ```bash
+   git clone https://github.com/onlinedynamics25/bsbtravels.git
+   cd segunotolorin
+   ```
+
+2. **Install dependencies:**
+
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
+
+3. **Set up environment variables:**
+
+   Create a `.env.local` file in the root directory and add your EmailJS credentials:
+
+   `NEXT_PUBLIC_EMAILJS_SERVICE_ID=your_service_id
+NEXT_PUBLIC_EMAILJS_TEMPLATE_ID=your_template_id
+NEXT_PUBLIC_EMAILJS_PUBLIC_KEY=your_public_key`
+
+### Running the Development Server
 
 ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view the site.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `/src/app` - Next.js app directory (pages, layout, etc.)
+- `/src/components` - Reusable React components (Navbar, Footer, Input, TextArea, Button, NotificationModal, etc.)
+- `/public/fonts` - Custom font files
+- `/styles` - Global and component styles
 
-## Learn More
+## Deployment
 
-To learn more about Next.js, take a look at the following resources:
+The recommended way to deploy this project is via [Vercel](https://vercel.com/):
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Push your repository to GitHub.
+- Import your project into Vercel and set the environment variables.
+- Vercel will handle builds and deployments automatically.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Contributing
 
-## Deploy on Vercel
+If you wish to continue or improve this project:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Fork the repository.
+- Create a new branch for your feature or fix.
+- Submit a pull request with a clear description of your changes.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## License
 
-## domain name detail from domainking.com
+This project is open source and available under the [MIT License](LICENSE).
+
+## Contact
+
+For questions or business inquiries, please use the contact form on the website or email [otolorinsegun9@gmail.com](mailto:otolorinsegun9@gmail.com).

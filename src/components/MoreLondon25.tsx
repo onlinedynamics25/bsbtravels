@@ -67,6 +67,7 @@ const attendees = [
 
 const MoreLondon25 = () => {
   const [showRegisterModal, setShowRegisterModal] = useState(false);
+  const isRegistrationOpen = false; // Change to false to close registration
   return (
     <section id="moreLon25" className="pt-8 lg:py-6 lg:px-20 ">
       <h1 className="font-playfair uppercase font-black text-center text-lg mb-2 lg:text-5xl lg:mb-4">
@@ -150,20 +151,21 @@ const MoreLondon25 = () => {
         ))}
       </ul>
 
-      {/* Register Button */}
-      <button
-        onClick={() => setShowRegisterModal(true)}
-        className="font-baskervvilleSC bg-[#061517] text-[#F7EBD5] px-8 py-3 rounded text-xl hover:bg-[#91671D] hover:text-[#F7EBD5] transition-all duration-300 ease-in-out"
-      >
-        Register Now
-      </button>
-
-      <Modal
-        open={showRegisterModal}
-        onClose={() => setShowRegisterModal(false)}
-      >
-        <RegisterLon25 />
-      </Modal>
+      {isRegistrationOpen ? (
+        <button
+          onClick={() => setShowRegisterModal(true)}
+          className="font-baskervvilleSC bg-[#061517] text-[#F7EBD5] px-8 py-3 rounded text-xl hover:bg-[#91671D] hover:text-[#F7EBD5] transition-all duration-300 ease-in-out"
+        >
+          Register Now
+        </button>
+      ) : (
+        <button
+          disabled
+          className="font-baskervvilleSC bg-gray-400 text-gray-200 cursor-not-allowed px-8 py-3 rounded text-xl"
+        >
+          Registration Closed
+        </button>
+      )}
     </section>
   );
 };

@@ -13,7 +13,7 @@ const Events = () => {
         "Business Supporting Business Travel Market, London Sights and Sounds",
       date: "November 3 - 10",
       location: "London",
-      status: "Registration closes 15th September, 2025",
+      status: "Registration is closed",
       text: "Learn More",
     },
     {
