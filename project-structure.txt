@@ -1,0 +1,92 @@
+.
+|-- .gitignore
+|-- .hintrc
+|-- README.md
+|-- next-env.d.ts
+|-- next.config.ts
+|-- package-lock.json
+|-- package.json
+|-- postcss.config.js
+|-- project-structure.txt
+|-- public
+|   |-- ODL
+|   |   |-- ODL-1.png
+|   |   |-- ODL-2.png
+|   |   `-- ODL-3.png
+|   |-- background-images
+|   |   |-- IMG-20250816-WA0076.jpg
+|   |   |-- IMG-20250816-WA0077(1).jpg
+|   |   |-- IMG-20250816-WA0078.jpg
+|   |   |-- IMG-20250816-WA0079.jpg
+|   |   |-- IMG-20250816-WA0080.jpg
+|   |   |-- IMG-20250816-WA0081.jpg
+|   |   |-- bg.png
+|   |   |-- events.jpg
+|   |   |-- hero-bg.jpg
+|   |   `-- hero.png
+|   |-- bsb-logo.jpg
+|   |-- bsb-logo.png
+|   |-- bsb-london25
+|   |   |-- IMG-20250811-WA0003.jpg
+|   |   |-- IMG-20250811-WA0026.jpg
+|   |   |-- IMG-20250811-WA0057(1).jpg
+|   |   |-- IMG-20250811-WA0058(1).jpg
+|   |   |-- IMG-20250812-WA0007(1).jpg
+|   |   |-- IMG-20250812-WA0008.jpg
+|   |   |-- IMG-20250812-WA0010.jpg
+|   |   |-- IMG-20250813-WA0011.jpg
+|   |   |-- IMG-20250813-WA0012.jpg
+|   |   |-- IMG-20250813-WA0013.jpg
+|   |   |-- IMG-20250813-WA0014.jpg
+|   |   |-- bonfire.png
+|   |   |-- london1.jpg
+|   |   |-- london2.jpg
+|   |   |-- london3.jpg
+|   |   |-- lord-mayor.png
+|   |   |-- remembrance.png
+|   |   `-- world.png
+|   |-- bsb-nobglogo.png
+|   |-- favicon.ico
+|   |-- fonts
+|   |   |-- Baskervville-Italic-VariableFont_wght.ttf
+|   |   |-- Baskervville-VariableFont_wght.ttf
+|   |   |-- BaskervvilleSC-VariableFont_wght.ttf
+|   |   `-- PlayfairDisplay-VariableFont_wght.ttf
+|   `-- logo.png
+|-- src
+|   |-- app
+|   |   |-- about
+|   |   |   `-- page.tsx
+|   |   |-- api
+|   |   |   |-- contact.ts
+|   |   |   `-- register.ts
+|   |   |-- contact
+|   |   |   `-- page.tsx
+|   |   |-- events
+|   |   |   `-- page.tsx
+|   |   |-- gallery
+|   |   |   `-- page.tsx
+|   |   |-- layout.tsx
+|   |   `-- page.tsx
+|   |-- components
+|   |   |-- Button.tsx
+|   |   |-- CallToAction.tsx
+|   |   |-- EventsPreview.tsx
+|   |   |-- Footer.tsx
+|   |   |-- GalleryPreview.tsx
+|   |   |-- Hero.tsx
+|   |   |-- Highlights.tsx
+|   |   |-- Input.tsx
+|   |   |-- Modal.tsx
+|   |   |-- MoreAbout.tsx
+|   |   |-- MoreLondon25.tsx
+|   |   |-- Navbar.tsx
+|   |   |-- NotificationModal.tsx
+|   |   |-- RegisterLon25.tsx
+|   |   `-- TextArea.tsx
+|   `-- styles
+|       `-- globals.css
+|-- tailwind.config.js
+`-- tsconfig.json
+
+14 directories, 75 files

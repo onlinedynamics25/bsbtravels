@@ -59,18 +59,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html
-      lang="en"
-      className={`${playfair.variable} ${baskervvilleSC.variable} ${baskervvile.variable}`}
-    >
-      <body className="font-baskervville">
-        <header>
-          <NavBar />
-        </header>{" "}
-        <main>{children}</main>{" "}
-        <footer>
-          <Footer />
-        </footer>
+    <html lang="en">
+      <body
+        className={`${playfair.variable} ${baskervvilleSC.variable} ${baskervvile.variable} font-baskervville antialiased`}
+      >
+        <NavBar />
+        <main className=" ">{children}</main>
+        <Footer />
       </body>
     </html>
   );

@@ -19,14 +19,14 @@ const Footer = () => {
           <div className="flex flex-col gap-2 items-center my-4 md:px-2 ">
             <div className="relative text-center ">
               <img
-                className="absolute inset-0 z-10 w-16 left-5 md:left-7 md:w-20 rounded-full"
-                src="/bsb-logo.jpg"
-                alt="BSB LOGO"
-              />
-              <img
-                className="relative w-16 -left-5 md:-left-7 md:w-20 rounded-full"
+                className="absolute inset-0 z-10 w-16 left-5 md:left-8 md:w-20 rounded-full"
                 src="/ODL/ODL-1.png"
                 alt="ODL LOGO"
+              />
+              <img
+                className="relative w-16 -left-5 md:-left-8 md:w-20 rounded-full"
+                src="/bsb-logo.jpg"
+                alt="BSB LOGO"
               />
             </div>
             <div className="text-center ">

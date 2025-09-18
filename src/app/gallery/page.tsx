@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 
-const Gallery = () => {
+export default function Gallery() {
   const photos: any[] = [
     // { src: "/bsb-london25/bonfire.png", alt: "1" },
     // { src: "/bsb-london25/bonfire.png", alt: "2" },
@@ -13,7 +13,7 @@ const Gallery = () => {
     // { src: "/bsb-london25/bonfire.png", alt: "8" },
   ];
   return (
-    <section id="gallery" className="p-4 min-h-fit scroll-mt-16 ">
+    <section id="gallery" className="p-4 min-h-screen md:pt-28 ">
       <h1 className="font-playfair font-black text-center uppercase text-3xl tracking-[10px] pb-2 md:text-[64px] md:leading-[72px]">
         Gallery
       </h1>
@@ -37,6 +37,4 @@ const Gallery = () => {
       )}
     </section>
   );
-};
-
-export default Gallery;
+}

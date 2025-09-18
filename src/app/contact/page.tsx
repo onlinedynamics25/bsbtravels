@@ -3,7 +3,7 @@ import Input from "@/components/Input";
 import NotificationModal from "@/components/NotificationModal";
 import React, { useState } from "react";
 
-const Contact = () => {
+export default function Contact() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
@@ -145,6 +145,4 @@ const Contact = () => {
       </div>
     </section>
   );
-};
-
-export default Contact;
+}

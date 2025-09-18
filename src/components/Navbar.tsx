@@ -2,55 +2,22 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState("hero");
+  const pathname = usePathname();
   const menuRef = useRef<HTMLDivElement>(null);
 
   const links = [
     { link: "Home", href: "/" },
-    { link: "Gallery", href: "#gallery" },
-    { link: "Events", href: "#events" },
-    { link: "About Us", href: "#about" },
-    { link: "Contact", href: "#contact" },
+    { link: "Gallery", href: "/gallery" },
+    { link: "Events", href: "/events" },
+    { link: "About Us", href: "/about" },
+    { link: "Contact", href: "/contact" },
   ];
 
-  useEffect(() => {
-    // ✅ Force page back to home on refresh
-    if (typeof window !== "undefined") {
-      history.replaceState(null, "", "#"); // clears hash so it's Home
-      setActiveSection("hero");
-      window.scrollTo({ top: 0, behavior: "instant" });
-    }
-
-    const sectionIds = links.map((l) => l.href.replace("#", ""));
-    const handleScroll = () => {
-      let found = "";
-      for (const id of sectionIds) {
-        const el = document.getElementById(id);
-        if (el) {
-          const rect = el.getBoundingClientRect();
-          if (rect.top <= 80 && rect.bottom >= 80) {
-            found = id;
-            break;
-          }
-        }
-      }
-      setActiveSection(found);
-
-      // update URL hash when section changes
-      if (window.location.hash !== `#${found}`) {
-        history.replaceState(null, "", `#${found}`);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    handleScroll();
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  // ✅ Close mobile menu when clicking outside
+  // ✅ Close mobile menu when clicking outside or pressing ESC
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
@@ -82,7 +49,7 @@ const NavBar = () => {
           {/* Brand */}
           <div className="flex-shrink-0">
             <img
-              className="p-3 w-16 md:w-20 rounded-full"
+              className="p-2 w-16 md:w-20 rounded-full"
               src="/bsb-logo.jpg"
               alt="BSB LOGO"
             />
@@ -95,7 +62,7 @@ const NavBar = () => {
                 key={index}
                 href={link.href}
                 className={`hover:text-[#B58124] hover:font-medium transition-colors duration-300 focus:font-bold focus:border-b-4 focus:border-[#B58124] md:p-2 ${
-                  activeSection === link.href.replace("#", "")
+                  pathname === link.href
                     ? "border-b-4 border-[#B58124] font-bold transition-colors duration-300"
                     : "transition-colors duration-300 "
                 }`}

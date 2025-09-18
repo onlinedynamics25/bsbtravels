@@ -3,7 +3,7 @@ import Modal from "@/components/Modal";
 import MoreAbout from "@/components/MoreAbout";
 import React, { useState } from "react";
 
-const About = () => {
+export default function About() {
   const [showRegisterModal, setShowRegisterModal] = useState(false);
   return (
     <section
@@ -45,6 +45,4 @@ const About = () => {
       </Modal>
     </section>
   );
-};
-
-export default About;
+}
