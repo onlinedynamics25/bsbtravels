@@ -3,32 +3,42 @@ import Modal from "@/components/Modal";
 import MoreLondon25 from "@/components/MoreLondon25";
 import React, { useState } from "react";
 import Button from "@/components/Button";
+import MoreZA2026 from "@/components/MoreZA2026";
 
 const Events = () => {
-  const [showRegisterModal, setShowRegisterModal] = useState(false);
+  const [activeEvent, setActiveEvent] = useState<string | null>(null);
 
   const events = [
     {
+      id: "london25",
       title: "London BSB Travels 2025",
       description:
         "The historic first BSB Travels event — a week of networking, business insights, and cultural exploration across London’s iconic sights and sounds.",
       date: "November 3 – 10, 2025",
       location: "London, UK",
       status: "Registration Closed",
-      cta: "View Details",
-      disabled: true,
     },
     {
+      id: "za26",
       title: "BSB in ZA – South Africa 2026",
       description:
         "From Cape Town’s coastline to Johannesburg’s bustling business hubs, join leaders for our first South African edition.",
       date: "May 10 – 17, 2026",
       location: "South Africa",
       status: "Coming Soon",
-      cta: "Notify Me",
-      disabled: false,
     },
   ];
+
+  const renderModalContent = () => {
+    switch (activeEvent) {
+      case "london25":
+        return <MoreLondon25 />;
+      case "za26":
+        return <MoreZA2026 />;
+      default:
+        return null;
+    }
+  };
 
   return (
     <section
@@ -75,15 +85,11 @@ const Events = () => {
                 {event.status}
               </span>
               <Button
-                onClick={() => !event.disabled && setShowRegisterModal(true)}
-                disabled={event.disabled}
-                className={`px-4 py-2 rounded font-semibold transition ${
-                  event.disabled
-                    ? "bg-gray-400 text-[#F6F1E6] cursor-not-allowed opacity-70"
-                    : "bg-[#E6BC72] text-[#061517] hover:bg-[#91671D] hover:text-[#F6F1E6]"
-                }`}
+                type="button"
+                onClick={() => setActiveEvent(event.id)}
+                className="px-4 py-2 rounded font-semibold transition bg-[#E6BC72] text-[#061517] hover:bg-[#91671D] hover:text-[#F6F1E6]"
               >
-                {event.cta}
+                View Details
               </Button>
             </div>
           </div>
@@ -91,10 +97,7 @@ const Events = () => {
       </div>
 
       {/* Modal */}
-      <Modal
-        open={showRegisterModal}
-        onClose={() => setShowRegisterModal(false)}
-      >
+      <Modal open={!!activeEvent} onClose={() => setActiveEvent(null)}>
         <MoreLondon25 />
       </Modal>
     </section>

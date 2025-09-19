@@ -1,58 +1,56 @@
 "use client";
-import React from "react";
+import React, { useEffect, useRef } from "react";
+import { X } from "lucide-react";
 
 interface ModalProps {
   open: boolean;
   onClose: () => void;
   title?: string;
   children: React.ReactNode;
-  size?: "sm" | "md" | "lg";
 }
 
-const Modal: React.FC<ModalProps> = ({
-  open,
-  onClose,
-  title,
-  children,
-  size = "md",
-}) => {
+const Modal: React.FC<ModalProps> = ({ open, onClose, title, children }) => {
+  const modalRef = useRef<HTMLDivElement>(null);
+
+  // Close on ESC key
+  useEffect(() => {
+    const handleEsc = (e: KeyboardEvent) => {
+      if (e.key === "Escape") onClose();
+    };
+    if (open) document.addEventListener("keydown", handleEsc);
+    return () => document.removeEventListener("keydown", handleEsc);
+  }, [open, onClose]);
+
   if (!open) return null;
 
-  const sizes = {
-    sm: "max-w-sm",
-    md: "max-w-lg",
-    lg: "max-w-2xl",
-  };
-
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center">
-      {/* Overlay */}
+    <div
+      className="fixed inset-0 z-50 flex items-end bg-black/50 backdrop-blur-sm"
+      onClick={onClose} // close if clicking outside modal
+    >
+      {/* Bottom Sheet Modal */}
       <div
-        className="absolute inset-0 bg-black/60 backdrop-blur-sm"
-        onClick={onClose}
-      />
-
-      {/* Modal Box */}
-      <div
-        className={`relative z-10 w-[90%] ${sizes[size]} bg-white rounded-lg shadow-lg p-6`}
+        ref={modalRef}
+        onClick={(e) => e.stopPropagation()} // prevent closing when clicking inside
+        className="relative w-full max-h-[85vh] overflow-y-auto bg-white shadow-lg animate-slideUp"
       >
         {/* Close Button */}
         <button
           onClick={onClose}
-          className="absolute top-3 right-3 text-gray-600 hover:text-black"
+          className="absolute top-4 right-4 text-gray-600 hover:text-black"
         >
-          ✕
+          <X size={28} />
         </button>
 
         {/* Title */}
         {title && (
-          <h2 className="text-xl font-bold mb-4 text-center text-[#0A1311]">
+          <h2 className="text-xl font-bold text-center text-[#0A1311] mt-4 mb-2">
             {title}
           </h2>
         )}
 
         {/* Content */}
-        <div>{children}</div>
+        <div className="p-6">{children}</div>
       </div>
     </div>
   );

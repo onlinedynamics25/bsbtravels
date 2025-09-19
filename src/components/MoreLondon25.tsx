@@ -166,6 +166,12 @@ const MoreLondon25 = () => {
           Registration Closed
         </button>
       )}
+      <Modal
+        open={showRegisterModal}
+        onClose={() => setShowRegisterModal(false)}
+      >
+        <RegisterLon25 />
+      </Modal>
     </section>
   );
 };
