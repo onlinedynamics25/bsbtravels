@@ -98,7 +98,7 @@ const Events = () => {
 
       {/* Modal */}
       <Modal open={!!activeEvent} onClose={() => setActiveEvent(null)}>
-        <MoreLondon25 />
+        {renderModalContent()}
       </Modal>
     </section>
   );
