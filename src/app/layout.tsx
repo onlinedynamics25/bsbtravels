@@ -3,8 +3,8 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "../styles/globals.css";
-import NavBar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+import NavBar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
 
 //Playfair Display
 const playfair = localFont({

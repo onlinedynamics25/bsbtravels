@@ -1,0 +1,113 @@
+.
+|-- .gitignore
+|-- .hintrc
+|-- README.md
+|-- next-env.d.ts
+|-- next.config.ts
+|-- package-lock.json
+|-- package.json
+|-- postcss.config.js
+|-- public
+|   |-- favicon.ico
+|   |-- fonts
+|   |   |-- Baskervville-Italic-VariableFont_wght.ttf
+|   |   |-- Baskervville-VariableFont_wght.ttf
+|   |   |-- BaskervvilleSC-VariableFont_wght.ttf
+|   |   `-- PlayfairDisplay-VariableFont_wght.ttf
+|   `-- images
+|       |-- background
+|       |   |-- IMG-20250816-WA0076.jpg
+|       |   |-- IMG-20250816-WA0077(1).jpg
+|       |   |-- IMG-20250816-WA0078.jpg
+|       |   |-- IMG-20250816-WA0079.jpg
+|       |   |-- IMG-20250816-WA0080.jpg
+|       |   |-- IMG-20250816-WA0081.jpg
+|       |   |-- bg.png
+|       |   |-- events.jpg
+|       |   |-- hero-bg.jpg
+|       |   `-- hero.png
+|       |-- brands
+|       |   |-- brand1.png
+|       |   |-- brand2.png
+|       |   |-- brant-text.png
+|       |   |-- bsb
+|       |   |   |-- brand-trans.png
+|       |   |   `-- brand.jpg
+|       |   `-- odl
+|       |-- bsb-london25
+|       |   |-- IMG-20250811-WA0003.jpg
+|       |   |-- IMG-20250811-WA0026.jpg
+|       |   |-- IMG-20250811-WA0057(1).jpg
+|       |   |-- IMG-20250811-WA0058(1).jpg
+|       |   |-- IMG-20250812-WA0007(1).jpg
+|       |   |-- IMG-20250812-WA0008.jpg
+|       |   |-- IMG-20250812-WA0010.jpg
+|       |   |-- IMG-20250813-WA0011.jpg
+|       |   |-- IMG-20250813-WA0012.jpg
+|       |   |-- IMG-20250813-WA0013.jpg
+|       |   |-- IMG-20250813-WA0014.jpg
+|       |   |-- bonfire.png
+|       |   |-- london1.jpg
+|       |   |-- london2.jpg
+|       |   |-- london3.jpg
+|       |   |-- lord-mayor.png
+|       |   |-- remembrance.png
+|       |   `-- world.png
+|       `-- events
+|           |-- ln25
+|           |-- nl25
+|           |   |-- day1
+|           |   |-- day2
+|           |   |-- day3
+|           |   `-- day4
+|           `-- za26
+|               `-- mascot.jpg
+|-- src
+|   |-- app
+|   |   |-- (marketing)
+|   |   |   |-- about
+|   |   |   |   `-- page.tsx
+|   |   |   |-- contact
+|   |   |   |   `-- page.tsx
+|   |   |   |-- events
+|   |   |   |   `-- page.tsx
+|   |   |   |-- gallery
+|   |   |   |   `-- page.tsx
+|   |   |   `-- page.tsx
+|   |   |-- api
+|   |   |   |-- contact.ts
+|   |   |   `-- register.ts
+|   |   `-- layout.tsx
+|   |-- components
+|   |   |-- features
+|   |   |   |-- MoreLondon25.tsx
+|   |   |   |-- MoreNether25.tsx
+|   |   |   |-- MoreZA26.tsx
+|   |   |   `-- RegisterLon25.tsx
+|   |   |-- gallery
+|   |   |   |-- ln25
+|   |   |   |-- nl25
+|   |   |   `-- za26
+|   |   |-- layout
+|   |   |   |-- Footer.tsx
+|   |   |   |-- Modal.tsx
+|   |   |   `-- Navbar.tsx
+|   |   |-- sections
+|   |   |   |-- CallToAction.tsx
+|   |   |   |-- EventsPreview.tsx
+|   |   |   |-- GalleryPreview.tsx
+|   |   |   |-- Hero.tsx
+|   |   |   |-- Highlights.tsx
+|   |   |   `-- NotificationModal.tsx
+|   |   `-- ui
+|   |       |-- Button.tsx
+|   |       |-- Input.tsx
+|   |       `-- TextArea.tsx
+|   `-- styles
+|       `-- globals.css
+|-- structure
+|-- structure.txt
+|-- tailwind.config.js
+`-- tsconfig.json
+
+34 directories, 76 files
