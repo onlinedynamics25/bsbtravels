@@ -60,7 +60,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="p-4 bg-[#6D4E16] min-h-fit scroll-mt-16 md:px-6 "
+      className="p-4 bg-golden-80 min-h-fit scroll-mt-16 md:px-6 "
     >
       {/* Notification Modal */}
       <NotificationModal
@@ -118,7 +118,7 @@ export default function Contact() {
         </div>
         <button
           type="submit"
-          className="mt-2 px-5 py-3 font-baskervvilleSC font-bold bg-[#061517] text-[#F7EBD5] text-2xl leading-7 -tracking-tight hover:bg-[#91671D] hover:text-[#061517] transition "
+          className="mt-2 px-5 py-3 font-baskervvilleSC font-bold bg-deepteal-100 text-[#F7EBD5] text-2xl leading-7 -tracking-tight hover:bg-[#91671D] hover:text-deepteal-100 transition "
           disabled={loading}
         >
           {loading ? "Sending..." : "Send Message"}

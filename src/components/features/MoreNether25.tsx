@@ -85,7 +85,7 @@ const MoreNether25 = () => {
       {/* Register Button */}
       <button
         onClick={() => setShowInfoModal(true)}
-        className="font-baskervvilleSC bg-[#061517] text-[#F7EBD5] px-8 py-3 rounded text-xl hover:bg-[#91671D] hover:text-[#F7EBD5] transition-all duration-300 ease-in-out"
+        className="font-baskervvilleSC bg-deepteal-100 text-[#F7EBD5] px-8 py-3 rounded text-xl hover:bg-[#91671D] hover:text-[#F7EBD5] transition-all duration-300 ease-in-out"
       >
         Register
       </button>
@@ -106,7 +106,7 @@ const MoreNether25 = () => {
           </p>
           <button
             onClick={() => setShowInfoModal(false)}
-            className="mt-4 bg-[#E6BC72] text-[#061517] px-6 py-2 rounded hover:bg-[#91671D] hover:text-[#F6F1E6] transition"
+            className="mt-4 bg-[#E6BC72] text-deepteal-100 px-6 py-2 rounded hover:bg-[#91671D] hover:text-[#F6F1E6] transition"
           >
             Close
           </button>

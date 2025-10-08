@@ -9,7 +9,7 @@ const Hero = () => (
   >
     <div className="absolute inset-0 bg-[#E6BC72]/50"></div>
     <motion.div
-      className="relative z-10 text-center max-w-4xl md:max-w-5xl text-[#061517]"
+      className="relative z-10 text-center max-w-4xl md:max-w-5xl text-deepteal-100"
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 1 }}
@@ -22,7 +22,7 @@ const Hero = () => (
       </p>
       <Button
         href="/events"
-        className="mt-10 px-8 py-4 bg-[#061517] text-[#F7EBD5] font-baskervvilleSC text-lg lg:text-2xl rounded hover:bg-[#F7EBD5] hover:text-[#061517] transition-colors"
+        className="mt-10 px-8 py-4 bg-deepteal-100 text-[#F7EBD5] font-baskervvilleSC text-lg lg:text-2xl rounded hover:bg-[#F7EBD5] hover:text-deepteal-100 transition-colors"
       >
         Join an Event
       </Button>

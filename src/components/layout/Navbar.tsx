@@ -45,7 +45,7 @@ const NavBar = () => {
   return (
     <nav className="fixed w-full min-h-fit top-0 left-0 z-50 font-baskervvilleSC">
       <div className="">
-        <div className="bg-[#0F363B] backdrop-blur-md text-[#F7EBD5] shadow-md flex justify-between items-center flex-row-reverse px-6 py-2 lg:px-16 ">
+        <div className="bg-deepteal-80 backdrop-blur-md text-[#F7EBD5] shadow-md flex justify-between items-center flex-row-reverse px-6 py-2 lg:px-16 ">
           {/* Brand */}
           <div className="flex-shrink-0">
             <img
@@ -85,7 +85,7 @@ const NavBar = () => {
       {isOpen && (
         <div
           ref={menuRef}
-          className="md:hidden transition-colors duration-300 max-w-fit h-fit flex flex-col bg-[#0F363B] backdrop-blur-md text-[#F7EBD5] shadow-md"
+          className="md:hidden transition-colors duration-300 max-w-fit h-fit flex flex-col bg-deepteal-80 backdrop-blur-md text-[#F7EBD5] shadow-md"
         >
           {links.map((link, index) => (
             <Link

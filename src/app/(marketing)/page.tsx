@@ -7,7 +7,7 @@ import Highlights from "@/components/sections/Highlights";
 
 export default function Home() {
   return (
-    <main className="font-baskerville bg-[#F2DEB8] text-[#061517] md:pt-12">
+    <main className="font-baskerville bg-golden-20 text-deepteal-100 md:pt-12">
       {/* Hero Section */}
       <Hero />
 

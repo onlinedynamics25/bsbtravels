@@ -132,7 +132,7 @@ const RegisterLon25 = () => {
   };
 
   return (
-    <div className="font-baskervville bg-[#D2E1E3] shadow-lg p-6 text-[#2B1F09]">
+    <div className="font-baskervville bg-deepteal-10 shadow-lg p-6 text-[#2B1F09]">
       {/* Notification Modal */}
       <NotificationModal
         open={notification.open}
@@ -503,7 +503,7 @@ const RegisterLon25 = () => {
         </section>
         <button
           type="submit"
-          className="mt-[86px] px-5 py-3 font-baskervvilleSC font-bold bg-[#061517] text-[#F7EBD5] text-2xl leading-7 -tracking-tight hover:bg-[#91671D] hover:text-[#061517] transition "
+          className="mt-[86px] px-5 py-3 font-baskervvilleSC font-bold bg-deepteal-100 text-[#F7EBD5] text-2xl leading-7 -tracking-tight hover:bg-[#91671D] hover:text-deepteal-100 transition "
           disabled={loading}
         >
           {loading ? "Submitting..." : "Submit"}

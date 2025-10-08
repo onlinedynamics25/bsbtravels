@@ -19,7 +19,7 @@ const netherlandsSummit2025: Event = {
             },
             {
               src: "/images/events/nl25/day1/arrival/riva.jpg",
-              alt: "Hotal Pamflet",
+              alt: "Hotel Pamphlet",
             },
             {
               src: "/images/events/nl25/day1/arrival/riva-hotel.jpg",
@@ -49,17 +49,16 @@ const netherlandsSummit2025: Event = {
           title: "Company Visit – Biota Nutri BV (09:00–12:00)",
           photos: [
             {
-              src: "/events/nl25/day2/biota.jpg",
+              src: "/images/events/nl25/day2/biota3.jpg",
               alt: "Biota Nutri visit",
             },
-          ],
-        },
-        {
-          title: "Reception at Marriott Hotel, Hague (16:00–19:00)",
-          photos: [
             {
-              src: "/events/nl25/day2/reception.jpg",
-              alt: "Reception",
+              src: "/images/events/nl25/day2/biota1.jpg",
+              alt: "Biota Nutri visit",
+            },
+            {
+              src: "/images/events/nl25/day2/biota2.jpg",
+              alt: "Biota Nutri visit",
             },
           ],
         },

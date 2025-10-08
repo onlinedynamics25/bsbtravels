@@ -1,7 +1,9 @@
 .
+|-- .env.local
 |-- .gitignore
 |-- .hintrc
 |-- README.md
+|-- components.json
 |-- next-env.d.ts
 |-- next.config.ts
 |-- package-lock.json
@@ -27,13 +29,13 @@
 |       |   |-- hero-bg.jpg
 |       |   `-- hero.png
 |       |-- brands
-|       |   |-- brand1.png
-|       |   |-- brand2.png
-|       |   |-- brant-text.png
 |       |   |-- bsb
 |       |   |   |-- brand-trans.png
 |       |   |   `-- brand.jpg
 |       |   `-- odl
+|       |       |-- brand1.png
+|       |       |-- brand2.png
+|       |       `-- brant-text.png
 |       |-- bsb-london25
 |       |   |-- IMG-20250811-WA0003.jpg
 |       |   |-- IMG-20250811-WA0026.jpg
@@ -45,21 +47,30 @@
 |       |   |-- IMG-20250813-WA0011.jpg
 |       |   |-- IMG-20250813-WA0012.jpg
 |       |   |-- IMG-20250813-WA0013.jpg
-|       |   |-- IMG-20250813-WA0014.jpg
-|       |   |-- bonfire.png
-|       |   |-- london1.jpg
-|       |   |-- london2.jpg
-|       |   |-- london3.jpg
-|       |   |-- lord-mayor.png
-|       |   |-- remembrance.png
-|       |   `-- world.png
+|       |   `-- IMG-20250813-WA0014.jpg
 |       `-- events
 |           |-- ln25
+|           |   |-- bonfire.png
+|           |   |-- london1.jpg
+|           |   |-- london2.jpg
+|           |   |-- london3.jpg
+|           |   |-- lord-mayor.png
+|           |   |-- remembrance.png
+|           |   `-- world.png
 |           |-- nl25
 |           |   |-- day1
+|           |   |   |-- arrival
+|           |   |   |   |-- arrival.jpg
+|           |   |   |   |-- riva-hotel.jpg
+|           |   |   |   `-- riva.jpg
+|           |   |   `-- welcome-dinner
+|           |   |       |-- dinner1.jpg
+|           |   |       `-- dinner2.jpg
 |           |   |-- day2
-|           |   |-- day3
-|           |   `-- day4
+|           |   |   |-- biota1.jpg
+|           |   |   |-- biota2.jpg
+|           |   |   `-- biota3.jpg
+|           |   `-- day3
 |           `-- za26
 |               `-- mascot.jpg
 |-- src
@@ -85,9 +96,11 @@
 |   |   |   |-- MoreZA26.tsx
 |   |   |   `-- RegisterLon25.tsx
 |   |   |-- gallery
-|   |   |   |-- ln25
-|   |   |   |-- nl25
-|   |   |   `-- za26
+|   |   |   |-- ActivityPlaceholder.tsx
+|   |   |   |-- EventCard.tsx
+|   |   |   |-- EventPlaceholder.tsx
+|   |   |   `-- nl25
+|   |   |       `-- index.tsx
 |   |   |-- layout
 |   |   |   |-- Footer.tsx
 |   |   |   |-- Modal.tsx
@@ -102,12 +115,15 @@
 |   |   `-- ui
 |   |       |-- Button.tsx
 |   |       |-- Input.tsx
-|   |       `-- TextArea.tsx
+|   |       |-- TextArea.tsx
+|   |       |-- accordion.tsx
+|   |       `-- card.tsx
+|   |-- lib
+|   |   `-- utils.ts
 |   `-- styles
 |       `-- globals.css
-|-- structure
 |-- structure.txt
 |-- tailwind.config.js
 `-- tsconfig.json
 
-34 directories, 76 files
+34 directories, 92 files

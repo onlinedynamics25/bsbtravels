@@ -68,7 +68,7 @@ export default function RootLayout({
         <NavBar />
         <main className=" ">{children}</main>
         <Footer />
-        <Analytics />
+        <Analytics mode="production" />
         <SpeedInsights />
       </body>
     </html>

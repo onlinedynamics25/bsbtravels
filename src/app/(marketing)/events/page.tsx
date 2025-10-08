@@ -72,11 +72,11 @@ const Events = () => {
   return (
     <section
       id="events"
-      className="relative min-h-screen px-4 py-22 bg-gradient-to-b from-[#F2DEB8] to-[#E6BC72] md:px-8 md:pt-26"
+      className="relative min-h-screen px-4 py-22 bg-gradient-to-b from-golden-20 to-[#E6BC72] md:px-8 md:pt-26"
     >
       {/* Section Title */}
       <div className="text-center mb-12">
-        <h1 className="font-playfair font-black uppercase text-[#061517] text-4xl tracking-wide md:text-6xl">
+        <h1 className="font-playfair font-black uppercase text-deepteal-100 text-4xl tracking-wide md:text-6xl">
           Upcoming Journeys
         </h1>
         <p className="mt-3 text-[#2B1F09] text-lg md:text-xl max-w-2xl mx-auto">
@@ -96,7 +96,7 @@ const Events = () => {
             <div className="flex-1 p-6 flex flex-row justify-between">
               <div className="basis-2/3">
                 <div>
-                  <h2 className="uppercase font-bold text-2xl text-[#061517]">
+                  <h2 className="uppercase font-bold text-2xl text-deepteal-100">
                     {event.title}
                   </h2>
                   <p className="text-[#2B1F09] text-base leading-relaxed">
@@ -116,14 +116,14 @@ const Events = () => {
             </div>
 
             {/* Card Footer */}
-            <div className="bg-[#061517] p-4 flex justify-between items-center">
+            <div className="bg-deepteal-100 p-4 flex justify-between items-center">
               <span className="text-[#E6BC72] italic text-sm">
                 {event.status}
               </span>
               <Button
                 type="button"
                 onClick={() => setActiveEvent(event.id)}
-                className="px-4 py-2 rounded font-semibold transition bg-[#E6BC72] text-[#061517] hover:bg-[#91671D] hover:text-[#F6F1E6]"
+                className="px-4 py-2 rounded font-semibold transition bg-[#E6BC72] text-deepteal-100 hover:bg-[#91671D] hover:text-[#F6F1E6]"
               >
                 View Details
               </Button>

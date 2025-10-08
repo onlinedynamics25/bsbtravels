@@ -154,7 +154,7 @@ const MoreLondon25 = () => {
       {isRegistrationOpen ? (
         <button
           onClick={() => setShowRegisterModal(true)}
-          className="font-baskervvilleSC bg-[#061517] text-[#F7EBD5] px-8 py-3 rounded text-xl hover:bg-[#91671D] hover:text-[#F7EBD5] transition-all duration-300 ease-in-out"
+          className="font-baskervvilleSC bg-deepteal-100 text-[#F7EBD5] px-8 py-3 rounded text-xl hover:bg-[#91671D] hover:text-[#F7EBD5] transition-all duration-300 ease-in-out"
         >
           Register Now
         </button>
