@@ -1,12 +1,10 @@
 @import "tailwindcss";
 
-@plugin "tailwindcss-animate";
-
 @theme inline {
   /* Font families */
-  --font-playfair: var(--font-playfair);
-  --font-baskervville: var(--font-baskervville);
-  --font-baskervvilleSC: var(--font-baskervvilleSC);
+  --font-playfair: var(--font-playfair); /* Display */
+  --font-baskervvilleSC: var(--font-baskervvilleSC); /* Headings */
+  --font-baskervville: var(--font-baskervville); /* Body */
 
   /* Colors */
   /* === Deep Teal Palette === */

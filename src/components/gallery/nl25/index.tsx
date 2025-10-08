@@ -70,10 +70,7 @@ const netherlandsSummit2025: Event = {
         {
           title: "Floral Holland (09:00–11:00)",
           photos: [
-            {
-              src: "/events/nl25/day3/floral.jpg",
-              alt: "Floral Holland",
-            },
+
           ],
         },
         {
@@ -81,7 +78,23 @@ const netherlandsSummit2025: Event = {
             "Boerderij Het Lansingerland (12:30–15:00) – Focus: organic farming",
           photos: [
             {
-              src: "/events/nl25/day3/farm.jpg",
+              src: "/images/events/nl25/day3/farm-visit.jpg",
+              alt: "Farm visit",
+            },
+            {
+              src: "/images/events/nl25/day3/farm3.jpg",
+              alt: "Farm visit",
+            },
+            {
+              src: "/images/events/nl25/day3/farm-entrance.jpg",
+              alt: "Farm visit",
+            },
+            {
+              src: "/images/events/nl25/day3/farm2.jpg",
+              alt: "Farm visit",
+            },
+            {
+              src: "/images/events/nl25/day3/farm.jpg",
               alt: "Farm visit",
             },
           ],
@@ -89,10 +102,7 @@ const netherlandsSummit2025: Event = {
         {
           title: "Delegation Debrief (17:00–18:00)",
           photos: [
-            {
-              src: "/events/nl25/day3/debrief.jpg",
-              alt: "Debrief session",
-            },
+
           ],
         },
       ],
@@ -103,19 +113,13 @@ const netherlandsSummit2025: Event = {
         {
           title: "Fresh for You – Amsterdam Food Center (09:30–11:30)",
           photos: [
-            {
-              src: "/events/nl25/day4/fresh.jpg",
-              alt: "Food center",
-            },
+
           ],
         },
         {
           title: "Boats at Spido Rotterdam (15:00–17:30)",
           photos: [
-            {
-              src: "/events/nl25/day4/harbor.jpg",
-              alt: "Rotterdam harbor tour",
-            },
+
           ],
         },
       ],

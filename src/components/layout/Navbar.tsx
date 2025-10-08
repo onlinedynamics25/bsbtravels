@@ -45,7 +45,7 @@ const NavBar = () => {
   return (
     <nav className="fixed w-full min-h-fit top-0 left-0 z-50 font-baskervvilleSC">
       <div className="">
-        <div className="bg-deepteal-80 backdrop-blur-md text-[#F7EBD5] shadow-md flex justify-between items-center flex-row-reverse px-6 py-2 lg:px-16 ">
+        <div className="bg-deepteal-80 backdrop-blur-md text-golden-10 shadow-md flex justify-between items-center flex-row-reverse px-6 py-2 lg:px-16 ">
           {/* Brand */}
           <div className="flex-shrink-0">
             <img
@@ -56,14 +56,14 @@ const NavBar = () => {
           </div>
 
           {/* Desktop Nav Links */}
-          <div className=" hidden md:flex space-x-0 text-[#F7EBD5] text-lg lg:text-xl ">
+          <div className=" hidden md:flex space-x-0 text-golden-10 text-lg lg:text-xl ">
             {links.map((link, index) => (
               <Link
                 key={index}
                 href={link.href}
-                className={`hover:text-[#B58124] hover:font-medium transition-colors duration-300 focus:font-bold focus:border-b-4 focus:border-[#B58124] md:p-2 ${
+                className={`hover:text-golden-60 hover:font-medium transition-colors duration-300 focus:font-bold focus:border-b-4 focus:border-golden-60 md:p-2 ${
                   pathname === link.href
-                    ? "border-b-4 border-[#B58124] font-bold transition-colors duration-300"
+                    ? "border-b-4 border-golden-60 font-bold transition-colors duration-300"
                     : "transition-colors duration-300 "
                 }`}
               >
@@ -85,13 +85,13 @@ const NavBar = () => {
       {isOpen && (
         <div
           ref={menuRef}
-          className="md:hidden transition-colors duration-300 max-w-fit h-fit flex flex-col bg-deepteal-80 backdrop-blur-md text-[#F7EBD5] shadow-md"
+          className="md:hidden transition-colors duration-300 max-w-fit h-fit flex flex-col bg-deepteal-80 backdrop-blur-md text-golden-10 shadow-md"
         >
           {links.map((link, index) => (
             <Link
               key={index}
               href={link.href}
-              className="hover:text-[#B58124] transition-colors duration-300 focus:border-b-4 focus:border-[#B58124] text-sm px-7 py-4 text-center"
+              className="hover:text-golden-60 transition-colors duration-300 focus:border-b-4 focus:border-golden-60 text-sm px-7 py-4 text-center"
             >
               {link.link}
             </Link>

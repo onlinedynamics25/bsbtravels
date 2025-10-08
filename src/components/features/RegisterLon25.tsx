@@ -132,7 +132,7 @@ const RegisterLon25 = () => {
   };
 
   return (
-    <div className="font-baskervville bg-deepteal-10 shadow-lg p-6 text-[#2B1F09]">
+    <div className="font-baskervville bg-deepteal-10 shadow-lg p-6 text-golden-100">
       {/* Notification Modal */}
       <NotificationModal
         open={notification.open}
@@ -141,7 +141,7 @@ const RegisterLon25 = () => {
         message={notification.message}
       />
       {/* Header */}
-      <header className="text-center mb-8 text-[#2B1F09]">
+      <header className="text-center mb-8 text-golden-100">
         <div className="flex flex-row items-center justify-center gap-2 mb-6">
           <div className="flex flex-row items-center justify-center pr-4">
             <img
@@ -181,7 +181,7 @@ const RegisterLon25 = () => {
           <h2 className="font-baskervvilleSC font-bold lg:text-4xl">
             Participant Information
           </h2>
-          <div className="text-2xl text-[#2B1F09]">
+          <div className="text-2xl text-golden-100">
             <Input
               id="participant-name"
               label="Name"
@@ -190,9 +190,9 @@ const RegisterLon25 = () => {
               required={true}
               value={participantName}
               onChange={(e) => setParticipantName(e.target.value)}
-              className="flex flex-row bg-[#C9C3B6] my-2"
+              className="flex flex-row bg-linen-60 my-2"
               labelClassName="px-4 py-4"
-              inputClassName="outline-none border-s-2 border-[#2B1F09] px-4 py-4 w-full"
+              inputClassName="outline-none border-s-2 border-golden-100 px-4 py-4 w-full"
             />
             <div className="flex flex-row items-center justify-between gap-8">
               <Input
@@ -202,9 +202,9 @@ const RegisterLon25 = () => {
                 required={true}
                 value={participantDob}
                 onChange={(e) => setParticipantDob(e.target.value)}
-                className="flex flex-row bg-[#C9C3B6]  my-2 w-full"
+                className="flex flex-row bg-linen-60  my-2 w-full"
                 labelClassName="px-4 py-4"
-                inputClassName="outline-none border-s-2 border-[#2B1F09] px-4 py-4 w-full"
+                inputClassName="outline-none border-s-2 border-golden-100 px-4 py-4 w-full"
               />
               <Input
                 id="gender"
@@ -217,9 +217,9 @@ const RegisterLon25 = () => {
                   { label: "Male", value: "male" },
                   { label: "Female", value: "female" },
                 ]}
-                className="flex flex-row bg-[#C9C3B6]  my-2 w-full"
+                className="flex flex-row bg-linen-60  my-2 w-full"
                 labelClassName="px-4 py-4"
-                inputClassName="outline-none border-s-2 border-[#2B1F09] px-4 py-4 w-full"
+                inputClassName="outline-none border-s-2 border-golden-100 px-4 py-4 w-full"
               />
             </div>
             <div className="flex flex-row items-center justify-between gap-8">
@@ -230,9 +230,9 @@ const RegisterLon25 = () => {
                 required={true}
                 value={passportNo}
                 onChange={(e) => setPassportNo(e.target.value)}
-                className="flex flex-row bg-[#C9C3B6]  my-2 basis-2/3"
+                className="flex flex-row bg-linen-60  my-2 basis-2/3"
                 labelClassName="px-4 py-4"
-                inputClassName="outline-none border-s-2 border-[#2B1F09] px-4 py-4 w-full"
+                inputClassName="outline-none border-s-2 border-golden-100 px-4 py-4 w-full"
               />
               <Input
                 id="expiry-date"
@@ -241,9 +241,9 @@ const RegisterLon25 = () => {
                 required={true}
                 value={expiryDate}
                 onChange={(e) => setExpiryDate(e.target.value)}
-                className="flex flex-row bg-[#C9C3B6]  my-2 w-full basis-1/3"
+                className="flex flex-row bg-linen-60  my-2 w-full basis-1/3"
                 labelClassName="px-4 py-4"
-                inputClassName="outline-none border-s-2 border-[#2B1F09] px-4 py-4 w-full"
+                inputClassName="outline-none border-s-2 border-golden-100 px-4 py-4 w-full"
               />
             </div>
             <Input
@@ -253,9 +253,9 @@ const RegisterLon25 = () => {
               required={true}
               value={nationality}
               onChange={(e) => setNationality(e.target.value)}
-              className="flex flex-row bg-[#C9C3B6]  my-2"
+              className="flex flex-row bg-linen-60  my-2"
               labelClassName="px-4 py-4"
-              inputClassName="outline-none border-s-2 border-[#2B1F09] px-4 py-4 w-full"
+              inputClassName="outline-none border-s-2 border-golden-100 px-4 py-4 w-full"
             />
           </div>
         </section>
@@ -274,9 +274,9 @@ const RegisterLon25 = () => {
               required={true}
               value={contactEmail}
               onChange={(e) => setContactEmail(e.target.value)}
-              className="flex flex-row bg-[#C9C3B6]  my-2"
+              className="flex flex-row bg-linen-60  my-2"
               labelClassName="px-4 py-4"
-              inputClassName="outline-none border-s-2 border-[#2B1F09] px-4 py-4 w-full"
+              inputClassName="outline-none border-s-2 border-golden-100 px-4 py-4 w-full"
             />
             <Input
               id="contact-number"
@@ -286,9 +286,9 @@ const RegisterLon25 = () => {
               required={true}
               value={contactNumber}
               onChange={(e) => setContactNumber(e.target.value)}
-              className="flex flex-row bg-[#C9C3B6] my-2"
+              className="flex flex-row bg-linen-60 my-2"
               labelClassName="px-4 py-4 w-2xs"
-              inputClassName="outline-none border-s-2 border-[#2B1F09] px-4 py-4 w-full"
+              inputClassName="outline-none border-s-2 border-golden-100 px-4 py-4 w-full"
             />
             <Input
               id="contact-address"
@@ -298,9 +298,9 @@ const RegisterLon25 = () => {
               required={true}
               value={contactAddress}
               onChange={(e) => setContactAddress(e.target.value)}
-              className="flex flex-row bg-[#C9C3B6]  my-2"
+              className="flex flex-row bg-linen-60  my-2"
               labelClassName="px-4 py-4"
-              inputClassName="outline-none border-s-2 border-[#2B1F09] px-4 py-4 w-full"
+              inputClassName="outline-none border-s-2 border-golden-100 px-4 py-4 w-full"
             />
           </div>
         </section>
@@ -323,9 +323,9 @@ const RegisterLon25 = () => {
                 { label: "Double/Twin", value: "double" },
                 { label: "Shared", value: "shared" },
               ]}
-              className="flex flex-row bg-[#C9C3B6] my-2 px-4"
+              className="flex flex-row bg-linen-60 my-2 px-4"
               labelClassName="px-4 py-4"
-              inputClassName="outline-none border-s-2 border-[#2B1F09] px-4 py-4 w-full"
+              inputClassName="outline-none border-s-2 border-golden-100 px-4 py-4 w-full"
             />
             <Input
               id="bonfire"
@@ -338,9 +338,9 @@ const RegisterLon25 = () => {
                 { label: "Alexandra", value: "alexandra" },
                 { label: "Thames", value: "thames" },
               ]}
-              className="flex flex-row bg-[#C9C3B6] my-2 px-4"
+              className="flex flex-row bg-linen-60 my-2 px-4"
               labelClassName="px-4 py-4"
-              inputClassName="outline-none border-s-2 border-[#2B1F09] px-4 py-4 w-full"
+              inputClassName="outline-none border-s-2 border-golden-100 px-4 py-4 w-full"
             />
             <Input
               id="airport-pick"
@@ -353,9 +353,9 @@ const RegisterLon25 = () => {
                 { label: "Yes", value: "yes" },
                 { label: "No", value: "no" },
               ]}
-              className="flex flex-row bg-[#C9C3B6] my-2 px-4"
+              className="flex flex-row bg-linen-60 my-2 px-4"
               labelClassName="px-4 py-4"
-              inputClassName="outline-none border-s-2 border-[#2B1F09] px-4 py-4 w-full"
+              inputClassName="outline-none border-s-2 border-golden-100 px-4 py-4 w-full"
             />
           </div>
         </section>
@@ -374,9 +374,9 @@ const RegisterLon25 = () => {
               placeholder="Enter your company name"
               value={companyName}
               onChange={(e) => setCompanyName(e.target.value)}
-              className="flex flex-row bg-[#C9C3B6] my-2 px-4"
+              className="flex flex-row bg-linen-60 my-2 px-4"
               labelClassName="px-4 py-4"
-              inputClassName="outline-none border-s-2 border-[#2B1F09] px-4 py-4 w-full"
+              inputClassName="outline-none border-s-2 border-golden-100 px-4 py-4 w-full"
             />
             <Input
               id="industry"
@@ -386,9 +386,9 @@ const RegisterLon25 = () => {
               placeholder="Enter your industry type"
               value={industry}
               onChange={(e) => setIndustry(e.target.value)}
-              className="flex flex-row bg-[#C9C3B6] my-2 px-4"
+              className="flex flex-row bg-linen-60 my-2 px-4"
               labelClassName="px-4 py-4"
-              inputClassName="outline-none border-s-2 border-[#2B1F09] px-4 py-4 w-full"
+              inputClassName="outline-none border-s-2 border-golden-100 px-4 py-4 w-full"
             />
             <Input
               id="purpose"
@@ -406,9 +406,9 @@ const RegisterLon25 = () => {
               showOtherInput={true}
               otherValue={otherPurpose}
               onOtherChange={(e) => setOtherPurpose(e.target.value)}
-              className="flex flex-row bg-[#C9C3B6] my-2 px-4"
+              className="flex flex-row bg-linen-60 my-2 px-4"
               labelClassName="px-4 py-4"
-              inputClassName="outline-none border-s-2 border-[#2B1F09] px-4 py-4 w-full"
+              inputClassName="outline-none border-s-2 border-golden-100 px-4 py-4 w-full"
             />
           </div>
         </section>
@@ -431,9 +431,9 @@ const RegisterLon25 = () => {
                 { label: "Card", value: "card" },
                 { label: "Other", value: "other" },
               ]}
-              className="flex flex-row bg-[#C9C3B6] my-2 px-4"
+              className="flex flex-row bg-linen-60 my-2 px-4"
               labelClassName="px-4 py-4"
-              inputClassName="outline-none border-s-2 border-[#2B1F09] px-4 py-4w-full"
+              inputClassName="outline-none border-s-2 border-golden-100 px-4 py-4w-full"
             />
             <Input
               id="deposit"
@@ -443,9 +443,9 @@ const RegisterLon25 = () => {
               required={true}
               value={deposit}
               onChange={(e) => setDeposit(e.target.value)}
-              className="flex flex-row bg-[#C9C3B6] my-2 px-4"
+              className="flex flex-row bg-linen-60 my-2 px-4"
               labelClassName="px-4 py-4"
-              inputClassName="outline-none border-s-2 border-[#2B1F09] px-4 py-4 w-full"
+              inputClassName="outline-none border-s-2 border-golden-100 px-4 py-4 w-full"
             />
             <Input
               id="balance-due"
@@ -455,9 +455,9 @@ const RegisterLon25 = () => {
               required={true}
               value={balanceDue}
               onChange={(e) => setBalanceDue(e.target.value)}
-              className="flex flex-row bg-[#C9C3B6] my-2 px-4"
+              className="flex flex-row bg-linen-60 my-2 px-4"
               labelClassName="px-4 py-4"
-              inputClassName="outline-none border-s-2 border-[#2B1F09] px-4 py-4 w-full"
+              inputClassName="outline-none border-s-2 border-golden-100 px-4 py-4 w-full"
             />
           </div>
         </section>
@@ -484,9 +484,9 @@ const RegisterLon25 = () => {
               type="file"
               required={true}
               onChange={handleSignatureChange}
-              className="flex flex-row bg-[#C9C3B6] my-2 basis-2/3"
+              className="flex flex-row bg-linen-60 my-2 basis-2/3"
               labelClassName="px-4 py-4"
-              inputClassName="outline-none border-s-2 border-[#2B1F09] px-4 py-4 w-full"
+              inputClassName="outline-none border-s-2 border-golden-100 px-4 py-4 w-full"
             />
             <Input
               id="date"
@@ -495,15 +495,15 @@ const RegisterLon25 = () => {
               required={true}
               value={declarationDate}
               onChange={(e) => setDeclarationDate(e.target.value)}
-              className="flex flex-row bg-[#C9C3B6] my-2 basis-1/3"
+              className="flex flex-row bg-linen-60 my-2 basis-1/3"
               labelClassName="px-4 py-4"
-              inputClassName="outline-none border-s-2 border-[#2B1F09] px-4 py-4 w-full "
+              inputClassName="outline-none border-s-2 border-golden-100 px-4 py-4 w-full "
             />
           </div>
         </section>
         <button
           type="submit"
-          className="mt-[86px] px-5 py-3 font-baskervvilleSC font-bold bg-deepteal-100 text-[#F7EBD5] text-2xl leading-7 -tracking-tight hover:bg-[#91671D] hover:text-deepteal-100 transition "
+          className="mt-[86px] px-5 py-3 font-baskervvilleSC font-bold bg-deepteal-100 text-golden-10 text-2xl leading-7 -tracking-tight hover:bg-golden-70 hover:text-deepteal-100 transition "
           disabled={loading}
         >
           {loading ? "Submitting..." : "Submit"}

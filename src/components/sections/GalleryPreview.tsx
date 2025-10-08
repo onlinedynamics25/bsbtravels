@@ -4,9 +4,9 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 
 const images = [
-  { src: "/gallery/event1.jpg", alt: "Networking Event" },
-  { src: "/gallery/luxury.jpg", alt: "Luxury Travel" },
-  { src: "/gallery/culture.jpg", alt: "Cultural Experience" },
+  { src: "/images/preview/networking-event.jpg", alt: "Networking Event" },
+  { src: "/images/preview/luxury-travel.jpg", alt: "Luxury Travel" },
+  { src: "/images/preview/cultural-experience.jpg", alt: "Cultural Experience" },
 ];
 
 const GalleryPreview = () => (
@@ -26,8 +26,10 @@ const GalleryPreview = () => (
           <Image
             src={img.src}
             alt={img.alt}
-            width={600}
-            height={400}
+            width={1920}
+            height={1080}
+            priority={false} // false enables lazy loading
+            quality={85} // Compresses image automatically
             className="w-full h-64 object-cover rounded-lg shadow"
           />
         </motion.div>

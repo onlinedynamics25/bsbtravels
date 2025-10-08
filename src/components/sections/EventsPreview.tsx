@@ -19,7 +19,7 @@ const EventsPreview = () => (
     </p>
     <Link
       href="/events"
-      className="px-6 py-3 bg-deepteal-100 text-[#F7EBD5] font-bold rounded hover:bg-[#F7EBD5] hover:text-deepteal-100 transition"
+      className="px-6 py-3 bg-deepteal-100 text-golden-10 font-bold rounded hover:bg-golden-10 hover:text-deepteal-100 transition"
     >
       Explore Events
     </Link>

@@ -48,7 +48,7 @@ const Input: React.FC<InputProps> = ({
         <label htmlFor={id} className={labelClassName}>
           {label}
         </label>
-        <div className="flex border-s-2 border-[#2B1F09] pl-4 gap-4">
+        <div className="flex border-s-2 border-golden-100 pl-4 gap-4">
           {options.map((option) => (
             <div className="flex justify-center items-center gap-4">
               <label htmlFor={`${id}-${option.value}`}>{option.label}</label>

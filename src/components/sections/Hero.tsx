@@ -7,7 +7,7 @@ const Hero = () => (
     className="relative h-screen bg-cover bg-center flex items-center justify-center px-6"
     style={{ backgroundImage: "url('/images/background/hero-bg.jpg')" }}
   >
-    <div className="absolute inset-0 bg-[#E6BC72]/50"></div>
+    <div className="absolute inset-0 bg-golden-40/50"></div>
     <motion.div
       className="relative z-10 text-center max-w-4xl md:max-w-5xl text-deepteal-100"
       initial={{ opacity: 0, y: 50 }}
@@ -22,7 +22,7 @@ const Hero = () => (
       </p>
       <Button
         href="/events"
-        className="mt-10 px-8 py-4 bg-deepteal-100 text-[#F7EBD5] font-baskervvilleSC text-lg lg:text-2xl rounded hover:bg-[#F7EBD5] hover:text-deepteal-100 transition-colors"
+        className="mt-10 px-8 py-4 bg-deepteal-100 text-golden-10 font-baskervvilleSC text-lg lg:text-2xl rounded hover:bg-golden-10 hover:text-deepteal-100 transition-colors"
       >
         Join an Event
       </Button>

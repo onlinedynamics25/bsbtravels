@@ -32,9 +32,8 @@ const Button: React.FC<ButtonProps> = ({
     return (
       <Link
         href={href}
-        className={`inline-block ${
-          disabled ? "pointer-events-none opacity-50" : ""
-        } ${className}`}
+        className={`inline-block ${disabled ? "pointer-events-none opacity-50" : ""
+          } ${className}`}
         target={target}
         rel={rel}
       >

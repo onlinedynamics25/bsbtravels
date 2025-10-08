@@ -2,7 +2,6 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import Link from "next/link";
 import {
   Accordion,
   AccordionItem,
@@ -12,6 +11,7 @@ import {
 
 import EventPlaceholder from "@/components/gallery/EventPlaceholder";
 import ActivityPlaceholder from "@/components/gallery/ActivityPlaceholder";
+import Button from "../ui/Button";
 
 export type Photo = {
   src: string;
@@ -43,26 +43,27 @@ export default function EventCard({ event }: { event: Event }) {
   );
 
   return (
-    <div className="max-w-3xl mx-auto bg-white rounded-2xl shadow-lg p-6 mb-10">
-      <h2 className="text-3xl font-bold">
+    <div className="max-w-3xl mx-auto bg-linen-base rounded-2xl shadow-lg p-6 mb-10">
+      <h2 className="text-3xl font-bold text-deepteal-100 ">
         {event.title} {event.year}
       </h2>
-      <p className="text-gray-600 mt-2">{event.description}</p>
+      <p className=" mt-2 text-deepteal-100 ">{event.description}</p>
 
       <div className="flex gap-4 mt-4">
-        <button
+        <Button
+          type="button"
           onClick={() => setExpanded(!expanded)}
-          className="px-4 py-2 bg-blue-600 text-white rounded-xl hover:bg-blue-700"
+          className="px-4 py-2 bg-deepteal-90 text-linen-20 rounded-xl hover:bg-golden-90"
         >
           {expanded ? "Hide Event" : "View Event"}
-        </button>
-        {event.ctaNext && (
-          <Link
+        </Button>
+        {event.ctaNext?.label && (
+          <Button
             href={event.ctaNext.href}
-            className="px-4 py-2 bg-gray-200 rounded-xl hover:bg-gray-300"
+            className="px-4 py-2 bg-golden-30 rounded-xl hover:bg-deepteal-20 text-deepteal-100 "
           >
             {event.ctaNext.label}
-          </Link>
+          </Button>
         )}
       </div>
 
@@ -93,8 +94,10 @@ export default function EventCard({ event }: { event: Event }) {
                                 <Image
                                   src={photo.src}
                                   alt={photo.alt}
-                                  width={400}
-                                  height={300}
+                                  width={1920}
+                                  height={1080}
+                                  priority={false} // false enables lazy loading
+                                  quality={85} // Compresses image automatically
                                   className="rounded-xl max-w-full max-h-72 object-cover shadow"
                                 />
                               </figure>

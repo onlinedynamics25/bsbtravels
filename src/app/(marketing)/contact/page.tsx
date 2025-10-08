@@ -69,7 +69,7 @@ export default function Contact() {
         type={notification.type}
         message={notification.message}
       />
-      <h1 className="font-playfair font-black text-center uppercase text-[#F6F1E6] text-4xl pb-8 md:text-[64px] md:leading-[72px]">
+      <h1 className="font-playfair font-black text-center uppercase text-linen-40 text-4xl pb-8 md:text-[64px] md:leading-[72px]">
         Contact Us
       </h1>
 
@@ -83,8 +83,8 @@ export default function Contact() {
           required={true}
           value={name}
           onChange={(e) => setName(e.target.value)}
-          className="flex flex-row bg-[#C9C3B6]"
-          labelClassName="px-4 py-4 bg-[#2B1F09] text-[#C9C3B6] uppercase font-bold "
+          className="flex flex-row bg-linen-60"
+          labelClassName="px-4 py-4 bg-golden-100 text-linen-60 uppercase font-bold "
           inputClassName="outline-none px-4 py-4 w-full"
         />
         <Input
@@ -95,14 +95,14 @@ export default function Contact() {
           required={true}
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          className="flex flex-row bg-[#C9C3B6] mt-2"
-          labelClassName="px-4 py-4 bg-[#2B1F09] text-[#C9C3B6] uppercase font-bold "
+          className="flex flex-row bg-linen-60 mt-2"
+          labelClassName="px-4 py-4 bg-golden-100 text-linen-60 uppercase font-bold "
           inputClassName="outline-none px-4 py-4 w-full"
         />
-        <div className="flex flex-col bg-[#C9C3B6] mt-2">
+        <div className="flex flex-col bg-linen-60 mt-2">
           <label
             htmlFor="message"
-            className="px-4 py-4 bg-[#2B1F09] text-[#C9C3B6] uppercase font-bold "
+            className="px-4 py-4 bg-golden-100 text-linen-60 uppercase font-bold "
           >
             Message
           </label>
@@ -118,7 +118,7 @@ export default function Contact() {
         </div>
         <button
           type="submit"
-          className="mt-2 px-5 py-3 font-baskervvilleSC font-bold bg-deepteal-100 text-[#F7EBD5] text-2xl leading-7 -tracking-tight hover:bg-[#91671D] hover:text-deepteal-100 transition "
+          className="mt-2 px-5 py-3 font-baskervvilleSC font-bold bg-deepteal-100 text-golden-10 text-2xl leading-7 -tracking-tight hover:bg-[#91671D] hover:text-deepteal-100 transition "
           disabled={loading}
         >
           {loading ? "Sending..." : "Send Message"}

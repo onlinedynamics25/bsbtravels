@@ -11,7 +11,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-deepteal-80 text-[#F7EBD5] pb-2">
+    <footer className="bg-deepteal-80 text-golden-10 pb-2">
       <div className="max-w-6xl mx-auto px-2 md:px-4 flex flex-col md:flex-row justify-between items-center ">
         {/* Brand / Logo */}
 
@@ -46,25 +46,25 @@ const Footer = () => {
           <div className="flex gap-2 font-baskervvilleSC">
             <Link
               href="#gallery"
-              className="hover:text-[#B58124] transition-colors duration-300"
+              className="hover:text-golden-60 transition-colors duration-300"
             >
               Gallery
             </Link>
             <Link
               href="#events"
-              className="hover:text-[#B58124] transition-colors duration-300"
+              className="hover:text-golden-60 transition-colors duration-300"
             >
               Events
             </Link>
             <Link
               href="#about"
-              className="hover:text-[#B58124] transition-colors duration-300"
+              className="hover:text-golden-60 transition-colors duration-300"
             >
               About Us
             </Link>
             <Link
               href="#contact"
-              className="hover:text-[#B58124] transition-colors duration-300"
+              className="hover:text-golden-60 transition-colors duration-300"
             >
               Contact
             </Link>
@@ -79,14 +79,14 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Icon className="hover:text-[#B58124] transition-colors duration-300 w-6 h-6 lg:w-10 lg:h-10 " />
+                <Icon className="hover:text-golden-60 transition-colors duration-300 w-6 h-6 lg:w-10 lg:h-10 " />
               </Link>
             ))}
           </div>
         </div>
       </div>
       {/* Copyright */}
-      <p className="font-baskervville italic text-center text-[8px] leading-4 tracking-wide text-[#FCFBF8] md:text-[12px] md:leading-5 lg:text-sm lg:leading-6">
+      <p className="font-baskervville italic text-center text-[8px] leading-4 tracking-wide text-linen-10 md:text-[12px] md:leading-5 lg:text-sm lg:leading-6">
         &copy; 2025 BSB Travel Concepts | A subsidiary of ONLINE DYNAMICS
         LIMITED
       </p>

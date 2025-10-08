@@ -72,14 +72,14 @@ const Events = () => {
   return (
     <section
       id="events"
-      className="relative min-h-screen px-4 py-22 bg-gradient-to-b from-golden-20 to-[#E6BC72] md:px-8 md:pt-26"
+      className="relative min-h-screen px-4 py-22 bg-gradient-to-b from-golden-20 to-golden-40 md:px-8 md:pt-26"
     >
       {/* Section Title */}
       <div className="text-center mb-12">
         <h1 className="font-playfair font-black uppercase text-deepteal-100 text-4xl tracking-wide md:text-6xl">
           Upcoming Journeys
         </h1>
-        <p className="mt-3 text-[#2B1F09] text-lg md:text-xl max-w-2xl mx-auto">
+        <p className="mt-3 text-golden-100 text-lg md:text-xl max-w-2xl mx-auto">
           Be part of the movement where business meets luxury travel. Our first
           journey in London has closed, but the adventure continues in 2026.
         </p>
@@ -90,7 +90,7 @@ const Events = () => {
         {events.map((event, index) => (
           <div
             key={index}
-            className="flex flex-col bg-[#F6F1E6] rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300"
+            className="flex flex-col bg-linen-40 rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300"
           >
             {/* Card Body */}
             <div className="flex-1 p-6 flex flex-row justify-between">
@@ -99,7 +99,7 @@ const Events = () => {
                   <h2 className="uppercase font-bold text-2xl text-deepteal-100">
                     {event.title}
                   </h2>
-                  <p className="text-[#2B1F09] text-base leading-relaxed">
+                  <p className="text-golden-100 text-base leading-relaxed">
                     {event.description}
                   </p>
                 </div>
@@ -108,8 +108,10 @@ const Events = () => {
                 <Image
                   src={event.src}
                   alt={event.alt}
-                  width={200}
-                  height={100}
+                  width={1920}
+                  height={1080}
+                  priority={false} // false enables lazy loading
+                  quality={85} // Compresses image automatically
                   className="max-w-full object-contain"
                 />
               </div>
@@ -117,13 +119,13 @@ const Events = () => {
 
             {/* Card Footer */}
             <div className="bg-deepteal-100 p-4 flex justify-between items-center">
-              <span className="text-[#E6BC72] italic text-sm">
+              <span className="text-golden-40 italic text-sm">
                 {event.status}
               </span>
               <Button
                 type="button"
                 onClick={() => setActiveEvent(event.id)}
-                className="px-4 py-2 rounded font-semibold transition bg-[#E6BC72] text-deepteal-100 hover:bg-[#91671D] hover:text-[#F6F1E6]"
+                className="px-4 py-2 rounded font-semibold transition bg-golden-40 text-deepteal-100 hover:bg-[#91671D] hover:text-linen-40"
               >
                 View Details
               </Button>

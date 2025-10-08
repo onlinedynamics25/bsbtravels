@@ -70,7 +70,7 @@ const MoreZA26 = () => {
       <h1 className="font-playfair uppercase font-black text-center text-lg mb-2 lg:text-5xl lg:mb-4">
         Overview of South Africa 2026 Experience
       </h1>
-      <hr className=" border-[#C9C3B6] my-2 lg:my-6 " />
+      <hr className=" border-linen-60 my-2 lg:my-6 " />
       <p className="lg:mb-6 lg:text-2xl">
         From <span className="font-bold">May 10–17, 2026</span>, participants
         will experience a unique blend of{" "}
@@ -83,26 +83,27 @@ const MoreZA26 = () => {
         wildlife, and coastline of KwaZulu-Natal.
       </p>
 
-      <hr className=" border-[#C9C3B6] my-2 lg:my-6 " />
+      <hr className=" border-linen-60 my-2 lg:my-6 " />
 
       {/* Activities */}
       <h2 className="font-bold text-xl text-center lg:text-2xl lg:mb-2">
         Activities & Itinerary Highlights
       </h2>
-      <hr className=" border-[#C9C3B6] my-2 lg:my-6 " />
+      <hr className=" border-linen-60 my-2 lg:my-6 " />
       <ol className="list-decimal mb-6 space-y-4 lg:grid lg:grid-cols-2 lg:gap-8">
         {activities.map((activity, index) => (
           <li
             key={index}
-            className={`flex flex-col-reverse md:justify-between lg:flex-row-reverse items-center gap-8 ${
-              index % 2 === 0 ? " md:flex-row-reverse " : " md:flex-row "
-            } `}
+            className={`flex flex-col-reverse md:justify-between lg:flex-row-reverse items-center gap-8 ${index % 2 === 0 ? " md:flex-row-reverse " : " md:flex-row "
+              } `}
           >
             <Image
               src={activity.image}
               alt={activity.title}
-              width={200}
-              height={150}
+              width={1920}
+              height={1080}
+              priority={false} // false enables lazy loading
+              quality={85} // Compresses image automatically
               className="object-contain"
             />
             <div>
@@ -119,33 +120,33 @@ const MoreZA26 = () => {
         ))}
       </ol>
 
-      <hr className="my-6 border-[#C9C3B6]" />
+      <hr className="my-6 border-linen-60" />
 
       {/* Benefits */}
       <h2 className="text-2xl font-bold mb-2">Benefits for Participants</h2>
-      <hr className=" border-[#C9C3B6] my-2 lg:my-6 " />
+      <hr className=" border-linen-60 my-2 lg:my-6 " />
       <ul className="list-disc ml-6 mb-6 space-y-2 flex flex-col lg:grid lg:grid-cols-2 gap-2">
         {benefits.map((benefit, i) => (
           <li key={i}>{benefit}</li>
         ))}
       </ul>
 
-      <hr className="my-6 border-[#C9C3B6]" />
+      <hr className="my-6 border-linen-60" />
 
       {/* Package Inclusions */}
       <h2 className="text-2xl font-bold mb-2">Package Inclusions</h2>
-      <hr className=" border-[#C9C3B6] my-2 lg:my-6 " />
+      <hr className=" border-linen-60 my-2 lg:my-6 " />
       <ul className="list-disc ml-6 mb-6 space-y-2 flex flex-col lg:grid lg:grid-cols-2 gap-2">
         {inclusions.map((inc, i) => (
           <li key={i}>{inc}</li>
         ))}
       </ul>
 
-      <hr className="my-6 border-[#C9C3B6]" />
+      <hr className="my-6 border-linen-60" />
 
       {/* Attendees */}
       <h2 className="text-2xl font-bold mb-2">Who Should Attend?</h2>
-      <hr className=" border-[#C9C3B6] my-2 lg:my-6 " />
+      <hr className=" border-linen-60 my-2 lg:my-6 " />
       <ul className="list-disc ml-6 mb-8 space-y-2 flex flex-col lg:grid lg:grid-cols-2 gap-2">
         {attendees.map((person, i) => (
           <li key={i}>{person}</li>
@@ -155,7 +156,7 @@ const MoreZA26 = () => {
       {isRegistrationOpen ? (
         <button
           onClick={() => setShowRegisterModal(true)}
-          className="font-baskervvilleSC bg-deepteal-100 text-[#F7EBD5] px-8 py-3 rounded text-xl hover:bg-[#91671D] hover:text-[#F7EBD5] transition-all duration-300 ease-in-out"
+          className="font-baskervvilleSC bg-deepteal-100 text-golden-10 px-8 py-3 rounded text-xl hover:bg-[#91671D] hover:text-golden-10 transition-all duration-300 ease-in-out"
         >
           Register Now
         </button>
