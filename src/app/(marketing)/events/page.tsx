@@ -104,7 +104,7 @@ const Events = () => {
                   </p>
                 </div>
               </div>
-              <div className="basis-1/3 py-2 px-4">
+              <div className="relative basis-1/3 py-2 px-4 h-64 ">
                 <Image
                   src={event.src}
                   alt={event.alt}
