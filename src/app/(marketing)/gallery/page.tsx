@@ -13,11 +13,9 @@ export default function Gallery() {
         Gallery
       </h1>
       <div className="max-w-7xl mx-auto mt-12">
-        <div className="">
-          <article>
-            <Netherlands25 />
-          </article>
-        </div>
+        <Netherlands25 />
+        <London25 />
+        <SouthAfrica26 />
       </div>
     </section>
   );

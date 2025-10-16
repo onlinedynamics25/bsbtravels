@@ -104,15 +104,15 @@ const Events = () => {
                   </p>
                 </div>
               </div>
-              <div className="relative basis-1/3 py-2 px-4 h-64 ">
+              <div className="relative w-fit basis-1/3 py-2 px-4 ">
                 <Image
                   src={event.src}
                   alt={event.alt}
-                  width={1920}
-                  height={1080}
+                  width={200}
+                  height={150}
                   priority={false} // false enables lazy loading
                   quality={85} // Compresses image automatically
-                  className="max-w-full object-contain"
+                  className="max-w-fit object-contain"
                 />
               </div>
             </div>
