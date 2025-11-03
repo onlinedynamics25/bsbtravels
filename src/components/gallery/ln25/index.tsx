@@ -14,12 +14,12 @@ const londonBSBTravels: Event = {
           media: [
             {
               src: "/images/events/ln25/day1/arrival.jpg",
-              alt: "Delegates arriving at Gatwick Airport",
+              alt: "Delegates arrival to Gatwick Airport",
             },
             {
               type: "video",
               src: "/images/events/ln25/day1/arrival-com.mp4",
-              alt: "Delegates arriving at Gatwick Airport",
+              alt: "Delegates arrival to Gatwick Airport",
             },
           ],
         },
