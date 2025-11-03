@@ -31,7 +31,6 @@ const londonBSBTravels: Event = {
               alt: "Delegates enroute to London Barking",
             },
             {
-              type: "video",
               src: "/images/events/ln25/day1/enroute2.mp4",
               alt: "Delegates enroute to London Barking",
             },
