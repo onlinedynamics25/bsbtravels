@@ -16,6 +16,11 @@ const londonBSBTravels: Event = {
               src: "/images/events/ln25/day1/arrival.jpg",
               alt: "Delegates arriving at Gatwick Airport",
             },
+            {
+              type: "video",
+              src: "/images/events/ln25/day1/arrival-com.mp4",
+              alt: "Delegates arriving at Gatwick Airport",
+            },
           ],
         },
       ],
