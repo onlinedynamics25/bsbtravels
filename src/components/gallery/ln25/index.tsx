@@ -183,15 +183,59 @@ const londonBSBTravels: Event = {
           ],
         },
         {
-          title: "Delegates setting out for Activity for the day",
+          title: "World Travel Market",
+          media: [
+            {
+              type: "video",
+              src: "/images/events/ln25/day3/speech-from.mp4",
+              alt: "Peru",
+            },
+          ],
+        },
+        {
+          title: "World Travel Market - Peru",
           media: [
             {
               src: "/images/events/ln25/day3/peru1.jpg",
-              alt: "",
+              alt: "Peru",
             },
             {
               src: "/images/events/ln25/day3/peru1.jpg",
-              alt: "",
+              alt: "Peru",
+            },
+          ],
+        },
+        {
+          title: "World Travel Market - Slovakia",
+          media: [
+            {
+              src: "/images/events/ln25/day3/trave.sk-slovakia.jpg",
+              alt: "Trave SK - Slovakia",
+            },
+          ],
+        },
+        {
+          title: "World Travel Market- China Tourists",
+          media: [
+            {
+              type: "video",
+              src: "/images/events/ln25/day3/nihao-china.mp4",
+              alt: "Nihao China",
+            },
+            {
+              type: "video",
+              src: "/images/events/ln25/day3/helen-DI-china-tourist.mp4",
+              alt: "Helen DI China Tourist",
+            },
+          ],
+        },
+        {
+          title: "World Travel Market- Saudia Arabia",
+          media: [
+            {
+              type: "video",
+              src: "/images/events/ln25/day3/bsbtravel-in-saudia.mp4",
+              alt: "BSB Travel in Saudia",
             },
           ],
         },
