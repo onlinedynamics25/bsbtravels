@@ -36,6 +36,165 @@ const londonBSBTravels: Event = {
             },
           ],
         },
+        {
+          title:
+            "Accreditation of the delegates upon arrival at London Barking",
+          media: [
+            {
+              type: "video",
+              src: "/images/events/ln25/day1/accreditation.mp4",
+              alt: "Accreditation of the delegates upon arrival at London Barking",
+            },
+          ],
+        },
+      ],
+    },
+    {
+      day: "Day 2 – Nov. 4: City Tour & Orientation",
+      activities: [
+        {
+          title: "Delegates at Excel London Venue",
+          media: [
+            {
+              src: "/images/events/ln25/day2/excel-london1.jpg",
+              alt: "Delegates at Excel London Venue",
+            },
+            {
+              src: "/images/events/ln25/day2/excel-london2.jpg",
+              alt: "Delegates at Excel London Venue",
+            },
+            {
+              src: "/images/events/ln25/day2/excel-london3.jpg",
+              alt: "Delegates at Excel London Venue",
+            },
+            {
+              src: "/images/events/ln25/day2/excel-london4.jpg",
+              alt: "Delegates at Excel London Venue",
+            },
+            {
+              src: "/images/events/ln25/day2/excel-london5.jpg",
+              alt: "Delegates at Excel London Venue",
+            },
+            {
+              src: "/images/events/ln25/day2/excel-london6.jpg",
+              alt: "Delegates at Excel London Venue",
+            },
+            {
+              src: "/images/events/ln25/day2/excel-london7.jpg",
+              alt: "Delegates at Excel London Venue",
+            },
+            {
+              src: "/images/events/ln25/day2/excel-london8.jpg",
+              alt: "Delegates at Excel London Venue",
+            },
+            {
+              src: "/images/events/ln25/day2/excel-london9.jpg",
+              alt: "Delegates at Excel London Venue",
+            },
+            {
+              src: "/images/events/ln25/day2/excel-london10.jpg",
+              alt: "Delegates at Excel London Venue",
+            },
+            {
+              src: "/images/events/ln25/day2/excel-london11.jpg",
+              alt: "Delegates at Excel London Venue",
+            },
+            {
+              src: "/images/events/ln25/day2/excel-london12.jpg",
+              alt: "Delegates at Excel London Venue",
+            },
+          ],
+        },
+        {
+          title: "Tour at WTM London",
+          media: [
+            {
+              type: "video",
+              src: "/images/events/ln25/day2/conference1.mp4",
+              alt: "Conference Session at WTM London",
+            },
+            {
+              type: "video",
+              src: "/images/events/ln25/day2/conference2.mp4",
+              alt: "Conference Session at WTM London",
+            },
+            {
+              type: "video",
+              src: "/images/events/ln25/day2/wtm-cultural.mp4",
+              alt: "Cultural Performance at WTM London",
+            },
+            {
+              type: "video",
+              src: "/images/events/ln25/day2/wtm-cultural2.mp4",
+              alt: "Cultural Performance at WTM London",
+            },
+            {
+              type: "video",
+              src: "/images/events/ln25/day2/wtm-cultural3.mp4",
+              alt: "Cultural Performance at WTM London",
+            },
+            {
+              type: "video",
+              src: "/images/events/ln25/day2/united-arab-emirate.mp4",
+              alt: "Tour at WTM London - United Arab Emirates Pavilion",
+            },
+            {
+              type: "video",
+              src: "/images/events/ln25/day2/the-gambia.mp4",
+              alt: "Tour at WTM London - The Gambia Pavilion",
+            },
+          ],
+        },
+        {
+          title: "Review on Jordan & BSB International Partnership",
+          media: [
+            {
+              type: "video",
+              src: "/images/events/ln25/day2/bsbxjordan.mp4",
+              alt: "Review on Jordan & BSB International Partnership",
+            },
+          ],
+        },
+        {
+          title: "Nakhal Lebanon & BSB International Partnership",
+          media: [
+            {
+              src: "/images/events/ln25/day2/nakhalxbsb.jpg",
+              alt: "Nakhal Lebanon & BSB International Partnership",
+            },
+          ],
+        },
+      ],
+    },
+    {
+      day: "Day 3 - Nov 5: World Travel Market",
+      activities: [
+        {
+          title: "Delegates setting out for Activity for the day",
+          media: [
+            {
+              src: "/images/events/ln25/day3/delegates-settingout1.jpg",
+              alt: "Delegates setting out for Activity for the day",
+            },
+            {
+              src: "/images/events/ln25/day3/delegates-settingout2.jpg",
+              alt: "Delegates setting out for Activity for the day",
+            },
+          ],
+        },
+        {
+          title: "Delegates setting out for Activity for the day",
+          media: [
+            {
+              src: "/images/events/ln25/day3/peru1.jpg",
+              alt: "",
+            },
+            {
+              src: "/images/events/ln25/day3/peru1.jpg",
+              alt: "",
+            },
+          ],
+        },
       ],
     },
   ],
