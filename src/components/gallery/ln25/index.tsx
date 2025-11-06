@@ -233,6 +233,10 @@ const londonBSBTravels: Event = {
           title: "World Travel Market- Saudia Arabia",
           media: [
             {
+              src: "/images/events/ln25/day3/arabic.jpg",
+              alt: "BSB Travel in Saudia",
+            },
+            {
               type: "video",
               src: "/images/events/ln25/day3/bsbtravel-in-saudia.mp4",
               alt: "BSB Travel in Saudia",
