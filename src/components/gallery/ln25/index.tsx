@@ -245,6 +245,125 @@ const londonBSBTravels: Event = {
         },
       ],
     },
+    {
+      day: "Day 4 - Nov 6: World Travel Market & Cultural Events",
+      activities: [
+        {
+          title: "Tour of TravelLodge London Barking Hotel",
+          media: [
+            {
+              type: "video",
+              src: "/images/events/ln25/day4/tour-london-barking.mp4",
+              alt: "Tour of TravelLodge London Barking Hotel",
+            },
+          ],
+        },
+        {
+          title: "Delegate with an official at WTM London",
+          media: [
+            {
+              src: "/images/events/ln25/day4/delegate.jpg",
+              alt: "Delegate with an official at WTM London",
+            },
+          ],
+        },
+        {
+          title: "Tour of Morocco Pavilion (Kingdom of Light) at WTM London",
+          media: [
+            {
+              type: "video",
+              src: "/images/events/ln25/day4/morocco.mp4",
+              alt: "Tour of Morocco Pavilion at WTM London",
+            },
+          ],
+        },
+        {
+          title: "Cultural Performance at WTM London",
+          media: [
+            {
+              type: "video",
+              src: "/images/events/ln25/day4/cultural1.mp4",
+              alt: "Cultural Performance at WTM London",
+            },
+            {
+              type: "video",
+              src: "/images/events/ln25/day4/cultural2.mp4",
+              alt: "Cultural Performance at WTM London",
+            },
+            {
+              src: "/images/events/ln25/day4/culture1.jpg",
+              alt: "Cultural Performance at WTM London",
+            },
+            {
+              src: "/images/events/ln25/day4/culture5.jpg",
+              alt: "Cultural Performance at WTM London",
+            },
+          ],
+        },
+        {
+          title: "Interview with Nadia on Medical Tourism",
+          media: [
+            {
+              type: "video",
+              src: "/images/events/ln25/day4/interview.mp4",
+              alt: "Interview with Nadia on Medical Tourism",
+            },
+          ],
+        },
+        {
+          title: "Nottingham: 2nd Phase of BSB London Tour 2025",
+          media: [
+            {
+              type: "video",
+              src: "/images/events/ln25/day4/Nottingham.mp4",
+              alt: "Nottingham",
+            },
+            {
+              src: "/images/events/ln25/day4/nottingham1.jpg",
+              alt: "Nottingham",
+            },
+            {
+              src: "/images/events/ln25/day4/nottingham2.jpg",
+              alt: "Nottingham",
+            },
+            {
+              src: "/images/events/ln25/day4/nottingham3.jpg",
+              alt: "Nottingham",
+            },
+            {
+              src: "/images/events/ln25/day4/nottingham4.jpg",
+              alt: "Nottingham",
+            },
+          ],
+        },
+      ],
+    },
+    {
+      day: "Day 5 - Nov 7: Cultural Exploration & Networking",
+      activities: [
+        {
+          title: "Breakfast in Nottingham",
+          media: [
+            {
+              src: "/images/events/ln25/day5/breakfast.jpg",
+              alt: "Breakfast in Nottingham",
+            },
+          ],
+        },
+      ],
+    },
+    {
+      day: "Day 6 - Nov 8: Lord Mayor’s Show & City Tour",
+      activities: [],
+    },
+    {
+      day: "Day 7 - Nov 9: Remembrance Day Ceremony",
+      activities: [],
+    },
+    {
+      day: "Day 8 - Nov 10: Departure",
+      activities: [],
+    },
   ],
 };
 
