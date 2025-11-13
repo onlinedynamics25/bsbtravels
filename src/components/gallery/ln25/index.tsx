@@ -350,6 +350,79 @@ const londonBSBTravels: Event = {
             },
           ],
         },
+        {
+          title: "Delegate fueling up for the day",
+          media: [
+            {
+              src: "/images/events/ln25/day5/fueling.jpg",
+              alt: "Delegate fueling up for the day",
+            },
+          ],
+        },
+        {
+          title: "Image from sightseeing in Nottingham",
+          media: [
+            {
+              src: "/images/events/ln25/day5/landscape.jpg",
+              alt: "image from sightseeing in Nottingham",
+            },
+          ],
+        },
+        {
+          title: "Delegates engaging in outdoor games",
+          media: [
+            {
+              type: "video",
+              src: "/images/events/ln25/day5/game.mp4",
+              alt: "Delegates playing an outdoor game",
+            },
+            {
+              type: "video",
+              src: "/images/events/ln25/day5/games.mp4",
+              alt: "Delegates playing an outdoor game",
+            },
+            {
+              type: "video",
+              src: "/images/events/ln25/day5/gameing.mp4",
+              alt: "Delegates playing an outdoor game",
+            },
+          ],
+        },
+        {
+          title: "Wollaton Hall and Deer Park Visit",
+          media: [
+            {
+              type: "video",
+              src: "/images/events/ln25/day5/Wallton.mp4",
+              alt: "Breakfast in Nottingham",
+            },
+            {
+              type: "video",
+              src: "/images/events/ln25/day5/Wallton2.mp4",
+              alt: "Breakfast in Nottingham",
+            },
+            {
+              type: "video",
+              src: "/images/events/ln25/day5/Wallton4.mp4",
+              alt: "Breakfast in Nottingham",
+            },
+          ],
+        },
+        {
+          title: "Departing in Nottingham",
+          media: [
+            {
+              type: "video",
+              src: "/images/events/ln25/day5/departing_nottingham.mp4",
+              alt: "Departing in Nottingham",
+            },
+            {
+              type: "video",
+              src: "/images/events/ln25/day5/departing-nottingham.mp4",
+              alt: "Departing in Nottingham",
+            },
+          ],
+        },
       ],
     },
     {
@@ -358,7 +431,28 @@ const londonBSBTravels: Event = {
     },
     {
       day: "Day 7 - Nov 9: Remembrance Day Ceremony",
-      activities: [],
+      activities: [
+        {
+          title: "Remembrance Day Ceremony",
+          media: [
+            {
+              type: "video",
+              src: "/images/events/ln25/day7/remembrance1.mp4",
+              alt: " Remembrance Day Ceremony",
+            },
+            {
+              type: "video",
+              src: "/images/events/ln25/day7/remembrance2.mp4",
+              alt: " Remembrance Day Ceremony",
+            },
+            {
+              type: "video",
+              src: "/images/events/ln25/day7/remembrance3.mp4",
+              alt: " Remembrance Day Ceremony",
+            },
+          ],
+        },
+      ],
     },
     {
       day: "Day 8 - Nov 10: Departure",
