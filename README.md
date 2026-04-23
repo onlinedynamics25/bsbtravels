@@ -24,7 +24,7 @@ This is a professional business website built with [Next.js](https://nextjs.org)
 
    ```bash
    git clone https://github.com/onlinedynamics25/bsbtravels.git
-   cd segunotolorin
+   cd bsbtravels
    ```
 
 2. **Install dependencies:**

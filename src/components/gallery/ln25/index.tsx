@@ -238,7 +238,7 @@ const londonBSBTravels: Event = {
             },
             {
               type: "video",
-              src: "/images/events/ln25/day3/bsbtravel-in-saudia.mp4",
+              src: "/images/events/ln25/day3/bsbtravel-in-saudia.jpg",
               alt: "BSB Travel in Saudia",
             },
           ],

@@ -1,3 +1,5 @@
+import China26 from "@/components/gallery/cn26";
+import China2026 from "@/components/gallery/cn26";
 import London25 from "@/components/gallery/ln25";
 import Netherlands25 from "@/components/gallery/nl25";
 import SouthAfrica26 from "@/components/gallery/za26";
@@ -15,6 +17,7 @@ export default function Gallery() {
       <div className="max-w-7xl mx-auto mt-12">
         <Netherlands25 />
         <London25 />
+        <China26 />
         <SouthAfrica26 />
       </div>
     </section>

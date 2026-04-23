@@ -34,6 +34,16 @@ const Events = () => {
       alt: "london-mascot",
     },
     {
+      id: "cn26",
+      title: "Nigeria meets CHINA '26",
+      description: "Canton Fair, Spring Edition - April, 2026",
+      date: "April 23 – 27, 2026",
+      location: "China",
+      status: "Ongoing",
+      src: "/images/events/cn26/mascot.jpg",
+      alt: "cn-mascot",
+    },
+    {
       id: "za26",
       title: "BSB in ZA – South Africa 2026",
       description:
