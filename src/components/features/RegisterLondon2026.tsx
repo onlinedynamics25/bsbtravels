@@ -3,7 +3,7 @@ import Input from "@/components/ui/Input";
 import NotificationModal from "@/components/sections/NotificationModal";
 import React, { useState } from "react";
 
-const RegisterLon25 = () => {
+const RegisterLondon2026 = () => {
   // Participant Information
   const [participantName, setParticipantName] = useState("");
   const [participantDob, setParticipantDob] = useState("");
@@ -513,4 +513,4 @@ const RegisterLon25 = () => {
   );
 };
 
-export default RegisterLon25;
+export default RegisterLondon2026;
