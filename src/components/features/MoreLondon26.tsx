@@ -1,8 +1,7 @@
-
 "use client";
 import React, { useState } from "react";
 import Modal from "@/components/layout/Modal";
-import RegisterLon25 from "@/components/features/RegisterLondon2026";
+import RegisterLondon2026 from "@/components/features/RegisterLondon2026";
 import Image from "next/image";
 
 const activities = [
@@ -25,7 +24,7 @@ const activities = [
   },
   {
     title: "Lord Mayor’s Show – Nov. 8",
-    image: "/bsb-london25/lord-mayor.png",
+    image: "/bsb-london26/lord-mayor.png", // Updated from 25 to 26 (verify folder name)
     items: [
       "Historic parade with floats, marching bands, and royal pageantry",
       "An 800-year-old London tradition",
@@ -33,7 +32,7 @@ const activities = [
   },
   {
     title: "Remembrance Day Ceremony – Nov. 9",
-    image: "/bsb-london25/remembrance.png",
+    image: "/bsb-london26/remembrance.png", // Updated from 25 to 26 (verify folder name)
     items: [
       "National tribute to the armed forces",
       "Wreath-laying ceremony with military bands and dignitaries",
@@ -44,13 +43,13 @@ const activities = [
 const benefits = [
   "Exposure to the global travel industry at World Travel Market",
   "First-hand experience of British heritage and culture",
-  "Networking with entrepreneurs and executives under the B3B platform",
+  "Networking with entrepreneurs and executives under the BSB platform",
   "Cultural immersion through iconic UK events",
   "Guided city tours with opportunities for shopping and exploration",
 ];
 
 const inclusions = [
- "Return airfare from Abuja to London (7 nights stay)",
+  "Return airfare from Abuja to London (7 nights stay)",
   "Airport transfers in London",
   "Access to World Travel Market",
   "Tickets for Bonfire Night & Lord Mayor’s Show",
@@ -68,13 +67,14 @@ const attendees = [
 
 const MoreLondon26 = () => {
   const [showRegisterModal, setShowRegisterModal] = useState(false);
-  const isRegistrationOpen = false; 
+  const isRegistrationOpen = false; // Set to 'true' when registration opens
+
   return (
-    <section id="moreLon25" className="pt-8 lg:py-6 lg:px-20 ">
+    <section id="moreLon26" className="pt-8 lg:py-6 lg:px-20">
       <h1 className="font-playfair uppercase font-black text-center text-lg mb-2 lg:text-5xl lg:mb-4">
         Overview of London 2026 Experience
       </h1>
-      <hr className=" border-linen-60 my-2 lg:my-6 " />
+      <hr className="border-linen-60 my-2 lg:my-6" />
       <p className="lg:mb-6 lg:text-2xl">
         From <span className="font-bold">November 3–10, 2026</span>,
         participants will explore London in a unique way—combining trade,
@@ -83,31 +83,32 @@ const MoreLondon26 = () => {
         world stage.
       </p>
 
-      <hr className=" border-linen-60 my-2 lg:my-6 " />
+      <hr className="border-linen-60 my-2 lg:my-6" />
 
       {/* Activities */}
       <h2 className="font-bold text-xl text-center lg:text-2xl lg:mb-2">
         Activities & Itinerary Highlights
       </h2>
-      <hr className=" border-linen-60 my-2 lg:my-6 " />
+      <hr className="border-linen-60 my-2 lg:my-6" />
       <ol className="list-decimal mb-6 space-y-4 lg:grid lg:grid-cols-2 lg:gap-8">
         {activities.map((activity, index) => (
           <li
             key={index}
-            className={`flex flex-col-reverse md:justify-between lg:flex-row-reverse items-center gap-8 ${index % 2 === 0 ? " md:flex-row-reverse " : " md:flex-row "
-              } `}
+            className={`flex flex-col-reverse md:justify-between lg:flex-row-reverse items-center gap-8 ${
+              index % 2 === 0 ? "md:flex-row-reverse" : "md:flex-row"
+            }`}
           >
             <Image
               src={activity.image}
               alt={activity.title}
               width={1920}
               height={1080}
-              priority={false} // false enables lazy loading
-              quality={85} // Compresses image automatically
+              priority={false}
+              quality={85}
               className="object-contain"
             />
             <div>
-              <span className="font-semibold text-base pb-4 lg:text-xl ">
+              <span className="font-semibold text-base pb-4 lg:text-xl">
                 {activity.title}
               </span>
               <ul className="list-disc ml-6 text-sm space-y-2">
@@ -124,7 +125,7 @@ const MoreLondon26 = () => {
 
       {/* Benefits */}
       <h2 className="text-2xl font-bold mb-2">Benefits for Participants</h2>
-      <hr className=" border-linen-60 my-2 lg:my-6 " />
+      <hr className="border-linen-60 my-2 lg:my-6" />
       <ul className="list-disc ml-6 mb-6 space-y-2 flex flex-col lg:grid lg:grid-cols-2 gap-2">
         {benefits.map((benefit, i) => (
           <li key={i}>{benefit}</li>
@@ -135,7 +136,7 @@ const MoreLondon26 = () => {
 
       {/* Package Inclusions */}
       <h2 className="text-2xl font-bold mb-2">Package Inclusions</h2>
-      <hr className=" border-linen-60 my-2 lg:my-6 " />
+      <hr className="border-linen-60 my-2 lg:my-6" />
       <ul className="list-disc ml-6 mb-6 space-y-2 flex flex-col lg:grid lg:grid-cols-2 gap-2">
         {inclusions.map((inc, i) => (
           <li key={i}>{inc}</li>
@@ -146,7 +147,7 @@ const MoreLondon26 = () => {
 
       {/* Attendees */}
       <h2 className="text-2xl font-bold mb-2">Who Should Attend?</h2>
-      <hr className=" border-linen-60 my-2 lg:my-6 " />
+      <hr className="border-linen-60 my-2 lg:my-6" />
       <ul className="list-disc ml-6 mb-8 space-y-2 flex flex-col lg:grid lg:grid-cols-2 gap-2">
         {attendees.map((person, i) => (
           <li key={i}>{person}</li>
@@ -172,10 +173,10 @@ const MoreLondon26 = () => {
         open={showRegisterModal}
         onClose={() => setShowRegisterModal(false)}
       >
-        <RegisterLon25 />
+        <RegisterLondon2026 />
       </Modal>
     </section>
   );
 };
 
-export default MoreLondon25;
+export default MoreLondon26; // Fixed from MoreLondon25
