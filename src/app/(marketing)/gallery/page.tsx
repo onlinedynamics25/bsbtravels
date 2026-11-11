@@ -3,6 +3,7 @@ import China2026 from "@/components/gallery/cn26";
 import London25 from "@/components/gallery/ln25";
 import Netherlands25 from "@/components/gallery/nl25";
 import SouthAfrica26 from "@/components/gallery/za26";
+import London26 from "@/components/gallery/ln26";
 import React from "react";
 
 export default function Gallery() {
@@ -19,6 +20,7 @@ export default function Gallery() {
         <London25 />
         <China26 />
         <SouthAfrica26 />
+        <London26 />
       </div>
     </section>
   );
