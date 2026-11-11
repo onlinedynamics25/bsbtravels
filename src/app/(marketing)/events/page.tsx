@@ -64,6 +64,17 @@ const Events = () => {
       src: "/mascots/netherlands.png", // temporary placeholder image
       alt: "nl-mascot",
     },
+    {
+      id: "london26",
+      title: "London BSB Travels 2026",
+      description:
+        "The historic first BSB Travels event — a week of networking, business insights, and cultural exploration across London’s iconic sights and sounds.",
+      date: "November 3 – 10, 2026",
+      location: "London, UK",
+      status: "Registration Closed",
+      src: "/mascots/london.png", // temporary placeholder image
+      alt: "london-mascot",
+    },
   ];
 
   const renderModalContent = () => {
