@@ -17,7 +17,7 @@ const activities = [
   },
   {
     title: "Bonfire Night & Fireworks – Nov. 5",
-    image: "/bsb-london26/bonfire.p",
+    image: "/bsb-london26/bonfire.png",
     items: [
       "Celebrate Guy Fawkes Night in the UK",
       "Enjoy a dazzling evening of bonfires, fireworks, and entertainment",
