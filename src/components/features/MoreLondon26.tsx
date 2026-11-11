@@ -42,15 +42,28 @@ const activities = [
 ];
 
 const benefits = [
-
+  "Exposure to the global travel industry at World Travel Market",
+  "First-hand experience of British heritage and culture",
+  "Networking with entrepreneurs and executives under the B3B platform",
+  "Cultural immersion through iconic UK events",
+  "Guided city tours with opportunities for shopping and exploration",
 ];
 
 const inclusions = [
-
+ "Return airfare from Abuja to London (7 nights stay)",
+  "Airport transfers in London",
+  "Access to World Travel Market",
+  "Tickets for Bonfire Night & Lord Mayor’s Show",
+  "Guided attendance at Remembrance Day Ceremony",
+  "Comprehensive travel insurance",
 ];
 
 const attendees = [
-
+  "Business executives & entrepreneurs",
+  "Professionals seeking international exposure",
+  "Investors exploring global opportunities",
+  "Young leaders & innovators",
+  "Anyone seeking a rich blend of business and cultural exploration",
 ];
 
 const MoreLondon26 = () => {
