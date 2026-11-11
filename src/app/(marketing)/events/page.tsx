@@ -5,6 +5,7 @@ import React, { useState } from "react";
 import Button from "@/components/ui/Button";
 import MoreZA2026 from "@/components/features/MoreZA26";
 import MoreNether25 from "@/components/features/MoreNether25";
+import MoreLondon26 from "@/components/features/MoreLondon26";
 import Image from "next/image";
 
 const Events = () => {
@@ -68,11 +69,11 @@ const Events = () => {
       id: "london26",
       title: "London BSB Travels 2026",
       description:
-        "The historic first BSB Travels event — a week of networking, business insights, and cultural exploration across London’s iconic sights and sounds.",
+        "The historic Second BSB Travels event — a week of networking, business insights, and cultural exploration across London’s iconic sights and sounds.",
       date: "November 3 – 10, 2026",
       location: "London, UK",
       status: "Registration Closed",
-      src: "/mascots/london.png", // temporary placeholder image
+      src: "/mascots/london.png",
       alt: "london-mascot",
     },
   ];
