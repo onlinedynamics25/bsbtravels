@@ -1,7 +1,7 @@
 import EventCard, { Event } from "../EventCard";
 
 const londonBSBTravels: Event = {
-  title: "Come To London 2026",
+  title: "Come To London '26",
   year: 2026,
   description:
     "November 3–10, 2026 — A week of international business engagements at World Travel Market, cultural encounters in Nottingham, historic exploration in Cardiff, and meaningful connections across the UK.",
