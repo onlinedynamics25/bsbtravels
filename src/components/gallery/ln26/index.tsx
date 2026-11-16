@@ -149,6 +149,11 @@ const londonBSBTravels: Event = {
               src: "/images/events/ln26/day5/yonn-cultural1.jpg",
               alt: "Celebrating Yoruba heritage with the Nigerian community in Nottinghamshire",
             },
+            {
+              type: "video",
+              src: "/images/events/ln26/day5/yonn-cultural2.jpg",
+              alt: "Celebrating Yoruba heritage with the Nigerian community in Nottinghamshire",
+            },
           ],
         },
       ],
