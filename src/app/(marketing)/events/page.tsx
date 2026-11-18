@@ -86,6 +86,8 @@ const Events = () => {
         return <MoreLondon25 />;
       case "za26":
         return <MoreZA2026 />;
+      case "london26":
+        return <MoreLondon26 />;
       default:
         return null;
     }
